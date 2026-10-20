@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "kind": "stress",
+  "timing_fields_excluded": true,
+  "monetary_energy_tolerance": {
+    "absolute": 0.0001,
+    "relative": 1e-10
+  },
+  "checks": [
+    {
+      "file": "stress_daily.csv",
+      "rows": 920,
+      "max_absolute_differences": {
+        "plan_cost_yuan": 1.4551915228366852e-11,
+        "adjustment_cost_yuan": 7.275957614183426e-12,
+        "emergency_cost_yuan": 4.3655745685100555e-11,
+        "total_cost_yuan": 8.731149137020111e-11,
+        "adjusted_grid_kwh": 0.0,
+        "emergency_kwh": 0.0,
+        "emergency_day": 0.0,
+        "soc_initial_kwh": 0.0,
+        "soc_final_kwh": 0.0
+      }
+    }
+  ]
+}

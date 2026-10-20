@@ -1,0 +1,12 @@
+{
+  "purpose": "independent learned day-ahead baselines on the same causal information set",
+  "train": "development 2025-02-01..06-30 (150 days), test models refit on development+validation",
+  "select": "validation 2025-07-01..09-30 (92 days)",
+  "test": "2025-10-01..12-31 (92 days), frozen",
+  "models": [
+    "ridge(alpha=10)",
+    "hist_gradient_boosting(max_iter=400,lr=0.05)"
+  ],
+  "features_are_causal": true,
+  "note": "price task uses only past prices + calendar + fixed tariff; PV/net-load tasks also use the operational PV forecast released at 00:00"
+}

@@ -1,0 +1,2934 @@
+{
+  "dataset": "microgrid_stochastic_rolling_optimisation_v2",
+  "generated": "2026-10-17",
+  "keys": {
+    "03_观测_10min": [
+      "date",
+      "slot_index"
+    ],
+    "04_评估日历": [
+      "date"
+    ],
+    "05_继承输入_Q2": [
+      "date",
+      "slot_index"
+    ],
+    "06_发布时刻输入": [
+      "date",
+      "release_hour",
+      "slot_index"
+    ],
+    "07_光伏预报_10min": [
+      "date",
+      "release_hour",
+      "slot_index"
+    ],
+    "10_ML训练表_10min": [
+      "date",
+      "slot_index"
+    ],
+    "08_场景库_净负荷": [
+      "date",
+      "quantile"
+    ],
+    "09_场景库_电价": [
+      "date",
+      "quantile"
+    ],
+    "11_实验_预测_每日": [
+      "date",
+      "window_days",
+      "decay_days"
+    ],
+    "13_实验_风险_每日": [
+      "date",
+      "risk_weight"
+    ],
+    "16_实验_分辨率_每日": [
+      "date",
+      "scenario_count"
+    ],
+    "18_实验_控制_每日": [
+      "date",
+      "gain",
+      "reserve_quantile"
+    ]
+  },
+  "time_protocol": {
+    "warmup": [
+      "2025-01-01",
+      "2025-01-31"
+    ],
+    "development": [
+      "2025-02-01",
+      "2025-06-30"
+    ],
+    "validation": [
+      "2025-07-01",
+      "2025-09-30"
+    ],
+    "test": [
+      "2025-10-01",
+      "2025-12-31"
+    ]
+  },
+  "target_columns": [
+    "load_kw",
+    "pv_kw",
+    "net_load_kw",
+    "price_yuan_per_kwh"
+  ],
+  "tables": {
+    "03_观测_10min": {
+      "rows": 52560,
+      "cols": 18,
+      "csv": "数据集\\csv\\03_观测_10min.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "slot_index",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "timestamp_start",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "timestamp_end",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "month",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "weekday",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "is_weekend",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "is_holiday",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "season",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "load_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_load_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "load_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_load_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_fixed_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    },
+    "04_评估日历": {
+      "rows": 334,
+      "cols": 11,
+      "csv": "数据集\\csv\\04_评估日历.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "pilot_selected",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "month",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "weekday",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "is_weekend",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "is_holiday",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "is_makeup_workday",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "day_of_year",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "week_of_year",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "season",
+          "dtype": "string",
+          "nullable": false
+        }
+      ]
+    },
+    "05_继承输入_Q2": {
+      "rows": 48096,
+      "cols": 21,
+      "csv": "数据集\\csv\\05_继承输入_Q2.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "slot_index",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "q2_planned_grid_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "charge_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "discharge_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "soc_start_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "soc_end_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "load_forecast_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_forecast_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_forecast_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q05_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q10_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q20_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q30_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q40_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q60_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q70_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q80_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q90_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q95_kw",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    },
+    "06_发布时刻输入": {
+      "rows": 120240,
+      "cols": 11,
+      "csv": "数据集\\csv\\06_发布时刻输入.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "release_hour",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "slot_index",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "horizon_slots",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "net_point_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "reserve20_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_point_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_upper_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "latest_observation_slot",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "history_end_date",
+          "dtype": "string",
+          "nullable": false
+        }
+      ]
+    },
+    "07_光伏预报_10min": {
+      "rows": 120240,
+      "cols": 8,
+      "csv": "数据集\\csv\\07_光伏预报_10min.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "release_hour",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "slot_index",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "horizon_minute",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "pv_forecast_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_actual_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "forecast_error_kw",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    },
+    "10_ML训练表_10min": {
+      "rows": 48096,
+      "cols": 59,
+      "csv": "数据集\\csv\\10_ML训练表_10min.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "slot_index",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "timestamp_start",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "month",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "weekday",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "is_weekend",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "is_holiday",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "is_makeup_workday",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "season",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "sin_slot",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "cos_slot",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "sin_doy",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "cos_doy",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "load_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_load_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_fixed_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "load_lag_1d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "load_lag_7d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "load_same_slot_mean_7d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "load_same_slot_mean_28d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_lag_1d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_lag_7d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_same_slot_mean_7d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_lag_1d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_same_slot_mean_7d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_lag_1d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_lag_7d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_lag_28d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_same_slot_mean_7d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_same_slot_mean_28d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_same_slot_std_28d",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "prev_slot_load_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "prev_slot_price_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "load_forecast_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_forecast_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_forecast_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q05_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q10_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q20_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q30_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q40_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q60_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q70_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q80_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q90_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "net_q95_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_fc_r00_kw",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "pv_fc_r06_kw",
+          "dtype": "float64",
+          "nullable": true
+        },
+        {
+          "name": "pv_fc_r12_kw",
+          "dtype": "float64",
+          "nullable": true
+        },
+        {
+          "name": "pv_fc_r18_kw",
+          "dtype": "float64",
+          "nullable": true
+        },
+        {
+          "name": "price_fc_r00_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "price_fc_r06_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": true
+        },
+        {
+          "name": "price_fc_r12_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": true
+        },
+        {
+          "name": "price_fc_r18_yuan_per_kwh",
+          "dtype": "float64",
+          "nullable": true
+        },
+        {
+          "name": "feature_available_at",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "target_available_at",
+          "dtype": "string",
+          "nullable": false
+        }
+      ]
+    },
+    "11_实验_预测_每日": {
+      "rows": 6680,
+      "cols": 8,
+      "csv": "数据集\\csv\\11_实验_预测_每日.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "window_days",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "decay_days",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mae",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mse",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "coverage80",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mean_width",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    },
+    "12_实验_预测_汇总": {
+      "rows": 60,
+      "cols": 8,
+      "csv": "数据集\\csv\\12_实验_预测_汇总.csv.gz",
+      "columns": [
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "window_days",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "decay_days",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "days",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "mae",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "coverage80",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mean_width",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "rmse",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    },
+    "13_实验_风险_每日": {
+      "rows": 2338,
+      "cols": 15,
+      "csv": "数据集\\csv\\13_实验_风险_每日.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "month",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "risk_weight",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "realized_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "realized_emergency_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "scenario_expected_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "scenario_cvar90_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "legacy_top2_mean_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "planned_grid_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "solver_time_sec",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "max_eq_residual_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "terminal_residual_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "max_simultaneous_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "dtype": "string",
+          "nullable": false
+        }
+      ]
+    },
+    "14_实验_风险_汇总": {
+      "rows": 28,
+      "cols": 8,
+      "csv": "数据集\\csv\\14_实验_风险_汇总.csv.gz",
+      "columns": [
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "risk_weight",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "days",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "mean_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "total_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mean_emergency_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "total_emergency_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mean_solver_sec",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    },
+    "15_实验_风险_配对": {
+      "rows": 7,
+      "cols": 6,
+      "csv": "数据集\\csv\\15_实验_风险_配对.csv.gz",
+      "columns": [
+        {
+          "name": "risk_weight",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "days",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "mean_cost_delta_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mean_emergency_reduction_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "month_cluster_ci_low_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "month_cluster_ci_high_yuan",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    },
+    "16_实验_分辨率_每日": {
+      "rows": 1336,
+      "cols": 9,
+      "csv": "数据集\\csv\\16_实验_分辨率_每日.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "month",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "scenario_count",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "realized_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "realized_emergency_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "solver_time_sec",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "scenario_cvar90_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "dtype": "string",
+          "nullable": false
+        }
+      ]
+    },
+    "17_实验_分辨率_汇总": {
+      "rows": 16,
+      "cols": 8,
+      "csv": "数据集\\csv\\17_实验_分辨率_汇总.csv.gz",
+      "columns": [
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "scenario_count",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "days",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "mean_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "total_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mean_emergency_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "total_emergency_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mean_solver_sec",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    },
+    "18_实验_控制_每日": {
+      "rows": 8350,
+      "cols": 17,
+      "csv": "数据集\\csv\\18_实验_控制_每日.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "month",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "gain",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "reserve_quantile",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "total_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "emergency_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "plan_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "adjustment_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "emergency_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "solver_time_sec",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "max_window_residual",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "balance_residual",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "recursion_residual",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "terminal_residual",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "simultaneous_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "dtype": "string",
+          "nullable": false
+        }
+      ]
+    },
+    "19_实验_控制_汇总": {
+      "rows": 100,
+      "cols": 9,
+      "csv": "数据集\\csv\\19_实验_控制_汇总.csv.gz",
+      "columns": [
+        {
+          "name": "split",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "gain",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "reserve_quantile",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "days",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "mean_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "total_cost_yuan",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mean_emergency_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "total_emergency_kwh",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "mean_solver_sec",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    },
+    "20_实验_控制_冻结对比": {
+      "rows": 334,
+      "cols": 33,
+      "csv": "数据集\\csv\\20_实验_控制_冻结对比.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "split_selected",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "month_selected",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "gain_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "reserve_quantile_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "total_cost_yuan_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "emergency_kwh_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "plan_cost_yuan_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "adjustment_cost_yuan_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "emergency_cost_yuan_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "solver_time_sec_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "max_window_residual_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "balance_residual_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "recursion_residual_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "terminal_residual_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "simultaneous_kwh_selected",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "status_selected",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "split_formal",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "month_formal",
+          "dtype": "int64",
+          "nullable": false
+        },
+        {
+          "name": "gain_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "reserve_quantile_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "total_cost_yuan_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "emergency_kwh_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "plan_cost_yuan_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "adjustment_cost_yuan_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "emergency_cost_yuan_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "solver_time_sec_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "max_window_residual_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "balance_residual_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "recursion_residual_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "terminal_residual_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "simultaneous_kwh_formal",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "status_formal",
+          "dtype": "string",
+          "nullable": false
+        }
+      ]
+    },
+    "08_场景库_净负荷": {
+      "rows": 3674,
+      "cols": 148,
+      "csv": "数据集\\csv\\scenario_net_wide.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "quantile",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "quantile_level",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "scenario_weight",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_001",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_002",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_003",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_004",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_005",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_006",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_007",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_008",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_009",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_010",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_011",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_012",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_013",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_014",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_015",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_016",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_017",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_018",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_019",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_020",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_021",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_022",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_023",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_024",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_025",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_026",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_027",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_028",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_029",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_030",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_031",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_032",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_033",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_034",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_035",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_036",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_037",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_038",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_039",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_040",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_041",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_042",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_043",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_044",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_045",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_046",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_047",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_048",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_049",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_050",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_051",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_052",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_053",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_054",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_055",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_056",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_057",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_058",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_059",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_060",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_061",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_062",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_063",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_064",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_065",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_066",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_067",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_068",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_069",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_070",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_071",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_072",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_073",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_074",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_075",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_076",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_077",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_078",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_079",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_080",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_081",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_082",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_083",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_084",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_085",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_086",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_087",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_088",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_089",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_090",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_091",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_092",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_093",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_094",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_095",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_096",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_097",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_098",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_099",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_100",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_101",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_102",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_103",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_104",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_105",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_106",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_107",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_108",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_109",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_110",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_111",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_112",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_113",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_114",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_115",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_116",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_117",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_118",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_119",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_120",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_121",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_122",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_123",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_124",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_125",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_126",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_127",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_128",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_129",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_130",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_131",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_132",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_133",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_134",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_135",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_136",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_137",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_138",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_139",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_140",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_141",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_142",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_143",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_144",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    },
+    "09_场景库_电价": {
+      "rows": 3674,
+      "cols": 148,
+      "csv": "数据集\\csv\\scenario_price_wide.csv.gz",
+      "columns": [
+        {
+          "name": "date",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "quantile",
+          "dtype": "string",
+          "nullable": false
+        },
+        {
+          "name": "quantile_level",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "scenario_weight",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_001",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_002",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_003",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_004",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_005",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_006",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_007",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_008",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_009",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_010",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_011",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_012",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_013",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_014",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_015",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_016",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_017",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_018",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_019",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_020",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_021",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_022",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_023",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_024",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_025",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_026",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_027",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_028",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_029",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_030",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_031",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_032",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_033",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_034",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_035",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_036",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_037",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_038",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_039",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_040",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_041",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_042",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_043",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_044",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_045",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_046",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_047",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_048",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_049",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_050",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_051",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_052",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_053",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_054",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_055",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_056",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_057",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_058",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_059",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_060",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_061",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_062",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_063",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_064",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_065",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_066",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_067",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_068",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_069",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_070",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_071",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_072",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_073",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_074",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_075",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_076",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_077",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_078",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_079",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_080",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_081",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_082",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_083",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_084",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_085",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_086",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_087",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_088",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_089",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_090",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_091",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_092",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_093",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_094",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_095",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_096",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_097",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_098",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_099",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_100",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_101",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_102",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_103",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_104",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_105",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_106",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_107",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_108",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_109",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_110",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_111",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_112",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_113",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_114",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_115",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_116",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_117",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_118",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_119",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_120",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_121",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_122",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_123",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_124",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_125",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_126",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_127",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_128",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_129",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_130",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_131",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_132",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_133",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_134",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_135",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_136",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_137",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_138",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_139",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_140",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_141",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_142",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_143",
+          "dtype": "float64",
+          "nullable": false
+        },
+        {
+          "name": "slot_144",
+          "dtype": "float64",
+          "nullable": false
+        }
+      ]
+    }
+  }
+}

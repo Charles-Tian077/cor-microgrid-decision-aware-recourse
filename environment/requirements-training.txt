@@ -1,0 +1,2 @@
+# Install requirements.txt first. Use the official CPU/CUDA index appropriate to the machine.
+torch==2.6.0

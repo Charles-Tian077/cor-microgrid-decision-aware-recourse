@@ -1,0 +1,35 @@
+{
+  "no_update": {
+    "candidate_minus_baseline_total_yuan": 85676.18701950449,
+    "candidate_minus_baseline_mean_daily_yuan": 931.2629023859183,
+    "paired_7day_block_bootstrap_95ci_mean_daily_yuan": [
+      357.0075526067005,
+      1813.3032161257513
+    ],
+    "days_candidate_lower_by_over_1_yuan": 15,
+    "days_candidate_higher_by_over_1_yuan": 32,
+    "days_near_tie": 45
+  },
+  "full_gain": {
+    "candidate_minus_baseline_total_yuan": -24004.03266491917,
+    "candidate_minus_baseline_mean_daily_yuan": -260.91339853173014,
+    "paired_7day_block_bootstrap_95ci_mean_daily_yuan": [
+      -576.4391335330608,
+      -38.921006621836256
+    ],
+    "days_candidate_lower_by_over_1_yuan": 23,
+    "days_candidate_higher_by_over_1_yuan": 24,
+    "days_near_tie": 45
+  },
+  "no_reserve": {
+    "candidate_minus_baseline_total_yuan": -23653.158162310894,
+    "candidate_minus_baseline_mean_daily_yuan": -257.0995452425097,
+    "paired_7day_block_bootstrap_95ci_mean_daily_yuan": [
+      -573.4043703201623,
+      -41.79159116548878
+    ],
+    "days_candidate_lower_by_over_1_yuan": 23,
+    "days_candidate_higher_by_over_1_yuan": 24,
+    "days_near_tie": 45
+  }
+}

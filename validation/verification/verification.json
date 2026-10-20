@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "unchanged_source_copies",
+      "files": 144,
+      "passed": true
+    },
+    {
+      "check": "observations_keys_and_rows",
+      "rows": 52560,
+      "passed": true
+    },
+    {
+      "check": "inherited_keys_and_rows",
+      "rows": 48096,
+      "passed": true
+    },
+    {
+      "check": "releases_keys_and_rows",
+      "rows": 120240,
+      "passed": true
+    },
+    {
+      "check": "learning_keys_and_rows",
+      "rows": 48096,
+      "passed": true
+    },
+    {
+      "check": "calendar_physical_inputs_release_clock",
+      "passed": true
+    },
+    {
+      "check": "causal_price_lags_independently_recomputed",
+      "max_errors": {
+        "price_lag_1d": 0.0,
+        "price_lag_7d": 0.0,
+        "price_lag_28d": 0.0,
+        "price_same_slot_mean_7d": 4.285714285767739e-05,
+        "price_same_slot_mean_28d": 5.000000000032756e-05,
+        "price_same_slot_std_28d": 4.999953940598711e-07
+      },
+      "documented_rounding": {
+        "historical_mean": 4,
+        "population_std": 6
+      },
+      "passed": true
+    },
+    {
+      "check": "paired_policy_accounting_soc_and_workload",
+      "test_policy_days": 368,
+      "validation_policy_days": 1196,
+      "passed": true
+    },
+    {
+      "check": "paired_statistics_independently_recomputed",
+      "passed": true
+    },
+    {
+      "check": "saved_neural_predictions_and_training_metadata",
+      "scored_periods": 26496,
+      "passed": true
+    },
+    {
+      "check": "stress_replay_records",
+      "policy_days": 920,
+      "passed": true
+    }
+  ],
+  "verified_main_results": {
+    "saving_cny": 24004.032664919177,
+    "mean_daily_saving_cny": 260.9133985317302,
+    "bootstrap_mean_daily_saving_95ci": [
+      38.92100662183632,
+      576.4391335330608
+    ],
+    "exploratory_wilcoxon_p": 0.10526217928850044,
+    "test_cost_cny": {
+      "no_update": 4390480.891291343,
+      "half_gain": 4304804.704271838,
+      "full_gain": 4280800.671606919,
+      "no_reserve": 4281151.546109527
+    },
+    "test_emergency_days": {
+      "no_update": 40,
+      "half_gain": 35,
+      "full_gain": 27,
+      "no_reserve": 28
+    },
+    "test_max_balance_residual_kwh": 1.8189894035458565e-12
+  },
+  "environment": {
+    "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "scipy": "1.14.1",
+      "scikit-learn": "1.2.2",
+      "openpyxl": "3.1.5"
+    }
+  },
+  "scope": "Archive integrity, causal features and numerical reconciliation; independent data and model validity are distinct."
+}

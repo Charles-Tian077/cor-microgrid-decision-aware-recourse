@@ -1,0 +1,7 @@
+{
+  "attempted": true,
+  "passed": false,
+  "blocked_before_script": true,
+  "reason": "MathWorks service error 5001; MATLAB could not contact required licensing service.",
+  "numerical_reproduction_depends_on_matlab": false
+}

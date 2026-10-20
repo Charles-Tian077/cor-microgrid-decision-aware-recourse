@@ -1,0 +1,13 @@
+# Generated runs and environments are not reference evidence.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+runs/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+*.log
+
+# Duplicate diagnostic snapshots are retained locally but omitted from this archive.
+results/reference/expanded/CPU诊断/

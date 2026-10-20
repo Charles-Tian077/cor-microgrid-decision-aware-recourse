@@ -1,0 +1,41 @@
+{
+  "n_rows": 398,
+  "analyses": [
+    "control_frozen",
+    "control_grid",
+    "control_main_effect",
+    "control_selection",
+    "evaluated_period_totals",
+    "physical_checks",
+    "pilot_vs_full",
+    "price_forecast",
+    "price_forecast_frozen",
+    "risk_frontier",
+    "risk_frontier_by_split",
+    "scenario_resolution",
+    "stochastic_programming_bounds"
+  ],
+  "full_days": 334,
+  "rolling_configs": 25,
+  "risk_weights": [
+    0.0,
+    0.0025,
+    0.005,
+    0.01,
+    0.02,
+    0.05,
+    0.1
+  ],
+  "seed": 20261017,
+  "bootstrap_draws": 4000,
+  "block_days": 7,
+  "residual_checks": {
+    "max_scenario_equality_residual_kwh": 0.0,
+    "max_terminal_soc_residual_kwh": 0.0,
+    "max_simultaneous_charge_discharge_kwh": 0.0,
+    "max_replay_balance_residual_kwh": 0.0,
+    "max_replay_recursion_residual_kwh": 0.0,
+    "max_replay_terminal_residual_kwh": 0.0,
+    "max_rolling_window_residual_kwh": 0.0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "runner": "run_full_parallel.py",
+  "workers": 6,
+  "dates": 334,
+  "elapsed_sec": 3701.5,
+  "risk_rows": 2330,
+  "resolution_rows": 1335,
+  "rolling_rows": 8350,
+  "failed_rows": 9,
+  "engine": "scipy.optimize.linprog(method='highs')",
+  "numerical_code": "unmodified copy of 扩展数据预实验/脚本/run_experiments.py + core/q4_model.py"
+}

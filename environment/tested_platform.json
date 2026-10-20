@@ -1,0 +1,11 @@
+{
+  "python": "3.11.15",
+  "tested_python": "3.11.15",
+  "os": "Windows 11 build 26200",
+  "processor": "Intel Core i9-14900HX",
+  "physical_cores": 24,
+  "logical_processors": 32,
+  "original_gru_run": "CPU diagnostic fallback; torch 2.6.0+cu118",
+  "new_checkpoint_run": "CPU, torch 2.6.0+cpu",
+  "independent_field_replication": false
+}

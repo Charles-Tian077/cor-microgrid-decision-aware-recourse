@@ -1,0 +1,23 @@
+{
+  "total_saving_yuan": 24004.032664919272,
+  "total_saving_percent": 0.5576102590925669,
+  "controllable_saving_percent": 16.361962137830442,
+  "emergency_saving_percent": 39.407512634274966,
+  "no_update_total_saving_percent": 2.4981368191802855,
+  "no_update_emergency_saving_percent": 68.26039732165995,
+  "wilcoxon_exploratory_p": 0.10526217928850044,
+  "bootstrap_ci_mean_delta": [
+    -576.4391335330608,
+    -38.92100662183632
+  ],
+  "max_test_balance_residual_kwh": 1.8189894035458565e-12,
+  "mean_two_lp_window_ms": 4.861583697029214,
+  "test_interpretation": "retrospective chronological evaluation; historical test inspection disclosed",
+  "source_sha256": {
+    "\u5b9e\u9a8c\\\u7ed3\u679c\\forecast_comparison.csv": "5a86e9ae605de0acaaf38e67beee01a3260f5bd21d6f78a36c901b617620f3d4",
+    "\u5b9e\u9a8c\\\u7ed3\u679c\\policy_test_daily.csv": "d550d9f35b928c7372fb0c09aeba720022c0712195cb6f004c528317d341d1d3",
+    "\u5b9e\u9a8c\\\u7ed3\u679c\\policy_test_monthly.csv": "be329bd40ff8af1b10463ced1eac89fb7d441ec3054bfc7c604fe803f5f7cdfb",
+    "\u5b9e\u9a8c\\\u7ed3\u679c\\policy_test_summary.csv": "55220d75919bb0145393f0c0c47120e755e042214c8b57216fdd41dcda482eaf",
+    "\u5b9e\u9a8c\\\u7ed3\u679c\\policy_validation_summary.csv": "c9e9daf4bc011a2e823f0f4c83c40a1f083892f1407fd173d9c5ef7a5d0a5a8b"
+  }
+}

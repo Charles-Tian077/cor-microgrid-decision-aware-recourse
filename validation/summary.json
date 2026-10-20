@@ -1,0 +1,19 @@
+{
+  "numerical_reproduction": "passed",
+  "core_model_source_modified": false,
+  "data_values_modified": false,
+  "successful_runs": [
+    "archive verification",
+    "frozen comparison",
+    "expanded validation and forecast comparison",
+    "original validation grid and 334-day continuation",
+    "five stress cases",
+    "three-seed GRU retraining",
+    "validation and test checkpoint inference",
+    "end-to-end expanded replay using reconstructed forecasts"
+  ],
+  "neural_mean_absolute_prediction_difference": 1.297946479467023e-08,
+  "neural_maximum_absolute_prediction_difference": 3.5762786865234375e-07,
+  "matlab_regeneration": "blocked before execution by licensing service error 5001; source and reference artifacts retained",
+  "reference_results_preserved": true
+}

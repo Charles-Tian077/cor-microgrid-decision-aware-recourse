@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying article when its final bibliographic details are available."
+type: software
+title: "Decision-aware receding-horizon linear programming for residential microgrids under asymmetric electricity settlement: reproducibility companion"
+authors:
+  - family-names: Tian
+    given-names: Dawen
+  - family-names: Li
+    given-names: Jiayi
+  - family-names: Zhang
+    given-names: Xinghai
+  - family-names: Qian
+    given-names: Rui
+  - family-names: Du
+    given-names: Xiaozhi
+  - family-names: Yang
+    given-names: Fan
+repository-code: "https://github.com/Charles-Tian077/cor-microgrid-decision-aware-recourse"

@@ -1,0 +1,30 @@
+{
+  "price": {
+    "selected_model": "hist_gbm",
+    "validation_mae": {
+      "ridge": 0.09273472089695718,
+      "hist_gbm": 0.06048268263084706
+    }
+  },
+  "net_load": {
+    "selected_model": "hist_gbm",
+    "validation_mae": {
+      "ridge": 424.97349052707204,
+      "hist_gbm": 351.5929563679489
+    }
+  },
+  "load": {
+    "selected_model": "hist_gbm",
+    "validation_mae": {
+      "ridge": 269.5933830279934,
+      "hist_gbm": 261.66992056149667
+    }
+  },
+  "pv": {
+    "selected_model": "ridge",
+    "validation_mae": {
+      "ridge": 161.12999925290947,
+      "hist_gbm": 190.3809240655391
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "artifact_type": "reconstructed CPU checkpoints, not the unavailable original checkpoint bytes",
+  "training_source_sha256": "b94a1cb8dbd76cc71ead56033cd4b096527150c0616f3c4cdfc1d81a3484a01e",
+  "training_source": "code/original/expanded/train_gpu.py",
+  "training_metadata": {
+    "gpu": "CPU diagnostic fallback",
+    "torch_version": "2.6.0+cpu",
+    "cuda_version": null,
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "training_days": 150,
+    "validation_days": 92,
+    "test_days": 92,
+    "selected_models": [
+      {
+        "seed": 17,
+        "selected_epoch": 2,
+        "validation_mae": 0.06615018490268332
+      },
+      {
+        "seed": 29,
+        "selected_epoch": 2,
+        "validation_mae": 0.06961093821661457
+      },
+      {
+        "seed": 43,
+        "selected_epoch": 2,
+        "validation_mae": 0.07377634864198868
+      }
+    ],
+    "input_sha256": {
+      "03_\u89c2\u6d4b_10min.csv.gz": "ca5660d016416b1e4dd36ca4ff67f44cd1fe872793a0a1307d8cadd537074f2b",
+      "10_ML\u8bad\u7ec3\u8868_10min.csv.gz": "e900c0b07d56fb1e07984863118f62bada4299a9397c6fab818924e37564f622"
+    },
+    "seconds": 63.475590799999736
+  },
+  "comparison_to_original_saved_predictions": {
+    "file": "gru_predictions.csv",
+    "compared_periods": 26496,
+    "mean_absolute_prediction_difference": 1.297946479467023e-08,
+    "maximum_absolute_prediction_difference": 3.5762786865234375e-07,
+    "bitwise_identity_required": false
+  },
+  "checkpoints": {
+    "gru_devval_seed17.pt": "474a519952941ea3ef867cd55e0c38005a7f449e97518fa2a09bf1b0347be37b",
+    "gru_devval_seed29.pt": "e0ee3bd896ed9e8f5dd49569b19aa895bdfd1cd8675af852ecc270dc683150c7",
+    "gru_devval_seed43.pt": "2daa102238b03995a5030e5e7f081cc4146c1bd398eb625b1d329ee124afe695",
+    "gru_dev_seed17.pt": "46a03a79981fa5f9861035b4d60691ea9cee8f5f99e9d5968e691fc4893c5be3",
+    "gru_dev_seed29.pt": "20f45e460517b833f763c1be5d36b06b396ed3628aef64e76d2ef1cc64822260",
+    "gru_dev_seed43.pt": "1d13267978aea9e57345adce18a65d8e265c663de4607beb67db8dbc89e72c9c"
+  }
+}

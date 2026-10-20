@@ -1,0 +1,11 @@
+{
+  "baseline_cost_yuan": 794910.9371269839,
+  "improving_setting": [
+    0.0,
+    1.0,
+    1.0
+  ],
+  "continue_full": true,
+  "pilot_days": 14,
+  "elapsed_sec": 5.164237208664417
+}

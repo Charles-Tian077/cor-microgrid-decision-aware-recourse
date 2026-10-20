@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "kind": "initial",
+  "timing_fields_excluded": true,
+  "monetary_energy_tolerance": {
+    "absolute": 0.0001,
+    "relative": 1e-10
+  },
+  "checks": [
+    {
+      "file": "full_daily.csv",
+      "rows": 668,
+      "max_absolute_differences": {
+        "plan_cost_yuan": 1.4551915228366852e-11,
+        "adjustment_cost_yuan": 9.094947017729282e-13,
+        "emergency_cost_yuan": 3.637978807091713e-12,
+        "total_cost_yuan": 2.9103830456733704e-11,
+        "adjusted_grid_kwh": 0.0,
+        "emergency_kwh": 0.0,
+        "emergency_day": 0.0,
+        "soc_initial_kwh": 0.0,
+        "soc_final_kwh": 0.0
+      }
+    },
+    {
+      "file": "validation_daily.csv",
+      "rows": 1012,
+      "max_absolute_differences": {
+        "plan_cost_yuan": 1.4551915228366852e-11,
+        "adjustment_cost_yuan": 9.094947017729282e-13,
+        "emergency_cost_yuan": 5.4569682106375694e-12,
+        "total_cost_yuan": 2.1827872842550278e-11,
+        "adjusted_grid_kwh": 0.0,
+        "emergency_kwh": 2.2737367544323206e-13,
+        "emergency_day": 0.0,
+        "soc_initial_kwh": 0.0,
+        "soc_final_kwh": 0.0
+      }
+    }
+  ]
+}

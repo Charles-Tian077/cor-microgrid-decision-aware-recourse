@@ -1,0 +1,22 @@
+{
+  "selected_alpha_gain_reserve": [
+    0.0,
+    1.0,
+    1.0
+  ],
+  "baseline_alpha_gain_reserve": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "test_n_days": 92,
+  "test_mean_daily_cost_delta_yuan_improved_minus_baseline": -260.91339853173014,
+  "test_total_cost_delta_yuan": -24004.03266491917,
+  "test_paired_block_bootstrap_95ci_mean_daily_delta_yuan": [
+    -581.2480398099104,
+    -41.674604808588285
+  ],
+  "test_wilcoxon_p_value_exploratory": 0.10526217928850044,
+  "elapsed_sec": 31.643212066031992,
+  "note": "Validation-selected alpha; 92-day frozen test. No claim of cross-site generalization."
+}

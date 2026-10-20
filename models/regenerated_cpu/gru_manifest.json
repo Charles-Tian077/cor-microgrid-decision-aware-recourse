@@ -1,0 +1,35 @@
+{
+  "gpu": "CPU diagnostic fallback",
+  "torch_version": "2.6.0+cpu",
+  "cuda_version": null,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "training_days": 150,
+  "validation_days": 92,
+  "test_days": 92,
+  "selected_models": [
+    {
+      "seed": 17,
+      "selected_epoch": 2,
+      "validation_mae": 0.06615018490268332
+    },
+    {
+      "seed": 29,
+      "selected_epoch": 2,
+      "validation_mae": 0.06961093821661457
+    },
+    {
+      "seed": 43,
+      "selected_epoch": 2,
+      "validation_mae": 0.07377634864198868
+    }
+  ],
+  "input_sha256": {
+    "03_观测_10min.csv.gz": "ca5660d016416b1e4dd36ca4ff67f44cd1fe872793a0a1307d8cadd537074f2b",
+    "10_ML训练表_10min.csv.gz": "e900c0b07d56fb1e07984863118f62bada4299a9397c6fab818924e37564f622"
+  },
+  "seconds": 63.475590799999736
+}

@@ -1,0 +1,869 @@
+{
+  "description": "Byte-identical copies of supplied research artifacts; generated portability wrappers are maintained separately.",
+  "files": [
+    {
+      "path": "data/export/csv/03_观测_10min.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/03_观测_10min.csv.gz",
+      "sha256": "ca5660d016416b1e4dd36ca4ff67f44cd1fe872793a0a1307d8cadd537074f2b",
+      "bytes": 2054574
+    },
+    {
+      "path": "data/export/csv/04_评估日历.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/04_评估日历.csv.gz",
+      "sha256": "80027c5a21e3e579d87af78df828fab12fb05368f865bc7c264251926d7a0d59",
+      "bytes": 2396
+    },
+    {
+      "path": "data/export/csv/05_继承输入_Q2.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/05_继承输入_Q2.csv.gz",
+      "sha256": "86b7686e66f4b31b64bd1f4dd84ade04ccdea674893b514d225eb81800076f28",
+      "bytes": 3556536
+    },
+    {
+      "path": "data/export/csv/06_发布时刻输入.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/06_发布时刻输入.csv.gz",
+      "sha256": "d3432e940b4fc73276207250a20d1c59b92b215d2fbe3edc336370db37ce8023",
+      "bytes": 2288791
+    },
+    {
+      "path": "data/export/csv/07_光伏预报_10min.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/07_光伏预报_10min.csv.gz",
+      "sha256": "8898e136f9727d1ce3b2b8f0241109bf8f37e90d45549637f003430579ba4b23",
+      "bytes": 1390347
+    },
+    {
+      "path": "data/export/csv/10_ML训练表_10min.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/10_ML训练表_10min.csv.gz",
+      "sha256": "e900c0b07d56fb1e07984863118f62bada4299a9397c6fab818924e37564f622",
+      "bytes": 8058403
+    },
+    {
+      "path": "data/export/csv/11_实验_预测_每日.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/11_实验_预测_每日.csv.gz",
+      "sha256": "24330153eeeb11813da996976d1442dbf054200e73393dc82b6dfcf65bc224c6",
+      "bytes": 214898
+    },
+    {
+      "path": "data/export/csv/12_实验_预测_汇总.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/12_实验_预测_汇总.csv.gz",
+      "sha256": "193d3edb414dda5c1519744207283f7cb9d9d445215e26eb62d4b60d25b4bc8a",
+      "bytes": 2376
+    },
+    {
+      "path": "data/export/csv/13_实验_风险_每日.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/13_实验_风险_每日.csv.gz",
+      "sha256": "2f5711f0ec5c5aca756ff9470a0f19caf3ae1628a4ce67cc6a0fba3befc21fb6",
+      "bytes": 149456
+    },
+    {
+      "path": "data/export/csv/14_实验_风险_汇总.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/14_实验_风险_汇总.csv.gz",
+      "sha256": "805fa20cbfe6f110429d1ccc2647552c2c96f3557f2ef924ee1ecc8671350580",
+      "bytes": 1600
+    },
+    {
+      "path": "data/export/csv/15_实验_风险_配对.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/15_实验_风险_配对.csv.gz",
+      "sha256": "1245c4b1c011b837817edec3e402e1a3b3f13a8fa96c3e6ee0793cdb54b9877f",
+      "bytes": 394
+    },
+    {
+      "path": "data/export/csv/16_实验_分辨率_每日.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/16_实验_分辨率_每日.csv.gz",
+      "sha256": "a6965c0b869024c9660dfd58678e5c7bba6c51fb7f5e71e8ac5727b935f92c7d",
+      "bytes": 53705
+    },
+    {
+      "path": "data/export/csv/17_实验_分辨率_汇总.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/17_实验_分辨率_汇总.csv.gz",
+      "sha256": "faf27fb63b56e95dcd868c925cff9b890f61d007f05d971f395e3af13ad1203f",
+      "bytes": 982
+    },
+    {
+      "path": "data/export/csv/18_实验_控制_每日.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/18_实验_控制_每日.csv.gz",
+      "sha256": "15318ea35abdb8fc0f75a240b7dc0b2ad29957c5505a5e1fc02b556885eba150",
+      "bytes": 253190
+    },
+    {
+      "path": "data/export/csv/19_实验_控制_汇总.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/19_实验_控制_汇总.csv.gz",
+      "sha256": "224edd762cf26bdaa0829ed11f4ba74c6d9bda1ebd0602e19cf50bdac3e922a7",
+      "bytes": 4334
+    },
+    {
+      "path": "data/export/csv/20_实验_控制_冻结对比.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/20_实验_控制_冻结对比.csv.gz",
+      "sha256": "87b60155702d5758cd4c6bce1f7163c157e3c65d91041effe782027187959b13",
+      "bytes": 33477
+    },
+    {
+      "path": "data/export/csv/scenario_net_wide.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/scenario_net_wide.csv.gz",
+      "sha256": "51e7be2487c8e2f1c60ec2fcff7b2cc7cf00acc97e4ac3c43abe1c6d1bc1bc4e",
+      "bytes": 2894915
+    },
+    {
+      "path": "data/export/csv/scenario_price_wide.csv.gz",
+      "original_source": "data/ML基线/数据集/csv/scenario_price_wide.csv.gz",
+      "sha256": "afd16a61af30cdde87ff14eacbe28aa8c213a1198676f7d471dcc735768440d8",
+      "bytes": 1865948
+    },
+    {
+      "path": "data/export/npz/inputs.npz",
+      "original_source": "data/ML基线/数据集/npz/inputs.npz",
+      "sha256": "fdad5f2370622634cefbbf9265810283ea493da12c916888446fff64e2241ae0",
+      "bytes": 1446589
+    },
+    {
+      "path": "data/export/npz/scenario_bank.npz",
+      "original_source": "data/ML基线/数据集/npz/scenario_bank.npz",
+      "sha256": "07a403f98b4a1ecd657088edc4a52fc63e4a63fac6b0b4c3b1d67eb189769f17",
+      "bytes": 7702737
+    },
+    {
+      "path": "data/export/导出清单与校验.csv",
+      "original_source": "data/ML基线/数据集/导出清单与校验.csv",
+      "sha256": "8885faa7b62459243486ef791389b91e9c7d4dae2878134594e6f36d48a61e2d",
+      "bytes": 2917
+    },
+    {
+      "path": "data/export/配电微网_随机优化数据集_v2.xlsx",
+      "original_source": "data/ML基线/数据集/配电微网_随机优化数据集_v2.xlsx",
+      "sha256": "80ab8e568c18b221ee5cce52faecf3815586a19a1effdc14d03090bb58d63782",
+      "bytes": 51479322
+    },
+    {
+      "path": "data/schema.json",
+      "original_source": "data/ML基线/服务器/schema.json",
+      "sha256": "61f925dc7848afa1d5443c45b848a715244a8cdb299222af46e792ddcf10fef1",
+      "bytes": 67949
+    },
+    {
+      "path": "data/source_provenance.csv",
+      "original_source": "data/ML基线/数据/source_provenance.csv",
+      "sha256": "b85f7c86b1510876c87aa96e70d3c4e7399fd55400f39f5577eff9c94d6cb59b",
+      "bytes": 498
+    },
+    {
+      "path": "docs/original_dataset_description.zh-CN.md",
+      "original_source": "data/ML基线/文档/数据集说明.md",
+      "sha256": "10aa8cc81903a4bed932fa4131d1f64c8b228a32da9b9688d99a0953e020c0a5",
+      "bytes": 6626
+    },
+    {
+      "path": "docs/original_benchmark_experiments.zh-CN.md",
+      "original_source": "data/ML基线/全日期实验结果说明.md",
+      "sha256": "b36bb5415c621884ee1beae16110bd6f9e86be30e62d4cf5c3fd158168b04223",
+      "bytes": 8027
+    },
+    {
+      "path": "code/original/expanded/q4_core.py",
+      "original_source": "实验/代码/q4_core.py",
+      "sha256": "cfa480c2ede1f8771438cf87de5d7b08da6b709e68b81caae69b467249ea2fcd",
+      "bytes": 79257
+    },
+    {
+      "path": "code/original/expanded/cor_q4_experiment.py",
+      "original_source": "实验/代码/cor_q4_experiment.py",
+      "sha256": "fa13b2dbd2ac84be3f49cc9a41a9b09e220d792932691940c4d64d4b86e7218e",
+      "bytes": 17050
+    },
+    {
+      "path": "code/original/expanded/evaluate_expansion.py",
+      "original_source": "实验/代码/evaluate_expansion.py",
+      "sha256": "747f6df7af907ae213c818a05ba9feae10ca02c737c23e90572c1bda0cafd311",
+      "bytes": 12128
+    },
+    {
+      "path": "code/original/expanded/train_gpu.py",
+      "original_source": "实验/代码/train_gpu.py",
+      "sha256": "b94a1cb8dbd76cc71ead56033cd4b096527150c0616f3c4cdfc1d81a3484a01e",
+      "bytes": 10961
+    },
+    {
+      "path": "code/original/expanded/cpu_baseline_probe.py",
+      "original_source": "实验/代码/cpu_baseline_probe.py",
+      "sha256": "5cf8c170c48710fcf2a45a9d1777f5179d934f9e5a9fb0985403bc00bd2f64f3",
+      "bytes": 2581
+    },
+    {
+      "path": "code/original/expanded/plot_expansion.py",
+      "original_source": "实验/代码/plot_expansion.py",
+      "sha256": "cb60e0347cb2ab418841ffd514f9dd3c1f0374260f7105c1d73f3c3cdf8691b8",
+      "bytes": 4443
+    },
+    {
+      "path": "code/original/benchmark/analyze_results.py",
+      "original_source": "data/ML基线/脚本/analyze_results.py",
+      "sha256": "1ac5c937104822031cabf9066421c7c1907eebf5f75c791f2abb2fe0be5c11f7",
+      "bytes": 30367
+    },
+    {
+      "path": "code/original/benchmark/build_dataset.py",
+      "original_source": "data/ML基线/脚本/build_dataset.py",
+      "sha256": "6e2133110c431c787c0a3c3df4db3bc8360a5eabaf96db0b4e9c4fb906104879",
+      "bytes": 69473
+    },
+    {
+      "path": "code/original/benchmark/core/q4_model.py",
+      "original_source": "data/ML基线/脚本/core/q4_model.py",
+      "sha256": "cfa480c2ede1f8771438cf87de5d7b08da6b709e68b81caae69b467249ea2fcd",
+      "bytes": 79257
+    },
+    {
+      "path": "code/original/benchmark/dataset_lib.py",
+      "original_source": "data/ML基线/脚本/dataset_lib.py",
+      "sha256": "491f2b83e0a33df381a71517c3ef619d4bf52a86f057801230b86101a7ddc0a8",
+      "bytes": 10377
+    },
+    {
+      "path": "code/original/benchmark/ml_baseline.py",
+      "original_source": "data/ML基线/脚本/ml_baseline.py",
+      "sha256": "12e982fca54aca7b572dbb16f9866052b47597d1dbe749ea9c94cc13ea2f5940",
+      "bytes": 11970
+    },
+    {
+      "path": "code/original/benchmark/plot_paper_figures.py",
+      "original_source": "data/ML基线/脚本/plot_paper_figures.py",
+      "sha256": "4d3ab397aa82c9714141a52a3fcd5548cac78d9927dee991376af0782e8e1c4a",
+      "bytes": 4692
+    },
+    {
+      "path": "code/original/benchmark/plot_results.py",
+      "original_source": "data/ML基线/脚本/plot_results.py",
+      "sha256": "25265c3198beee7fa5df6b97e0a3b96e137e46893bea3a22fd0037e6e154ec5c",
+      "bytes": 10308
+    },
+    {
+      "path": "code/original/benchmark/requirements.txt",
+      "original_source": "data/ML基线/脚本/requirements.txt",
+      "sha256": "bb4552796a75dcb6f73a439e97754eda17e6633666cfb7f5b8d89a76425d329f",
+      "bytes": 65
+    },
+    {
+      "path": "code/original/benchmark/rerun_failed.py",
+      "original_source": "data/ML基线/脚本/rerun_failed.py",
+      "sha256": "02004ba433d1849b6890a57b15f54f9db28ecf90cf514d21070ba0fcb452cda6",
+      "bytes": 4972
+    },
+    {
+      "path": "code/original/benchmark/run_bounds.py",
+      "original_source": "data/ML基线/脚本/run_bounds.py",
+      "sha256": "22e58263ebaadd381621e6a803eb716bb5e5d10217f80ed2d19834ff6e297635",
+      "bytes": 5117
+    },
+    {
+      "path": "code/original/benchmark/run_experiments.py",
+      "original_source": "data/ML基线/脚本/run_experiments.py",
+      "sha256": "491ff50880bc96b23ec098ba5f5129d2289d4921441c13d1fa56559a028aed05",
+      "bytes": 33998
+    },
+    {
+      "path": "code/original/benchmark/run_full_parallel.py",
+      "original_source": "data/ML基线/脚本/run_full_parallel.py",
+      "sha256": "dcc59484db1cc1ffc75ddd99e2b79214ea7a39da88a1a3bb4ee34c50f0c6c39b",
+      "bytes": 10138
+    },
+    {
+      "path": "code/original/benchmark/verify_bundle.py",
+      "original_source": "data/ML基线/脚本/verify_bundle.py",
+      "sha256": "277576eaf96b869f113112816b44be87f7caf801fe4ea62c76502e26fd04f128",
+      "bytes": 3804
+    },
+    {
+      "path": "code/original/benchmark/verify_deliverables.py",
+      "original_source": "data/ML基线/脚本/verify_deliverables.py",
+      "sha256": "5bf930ff12fb30e95b840bd73748f3b140dc671c36f162afc18ae2ab20b75957",
+      "bytes": 7781
+    },
+    {
+      "path": "results/reference/expanded/cpu_baseline_daily.csv",
+      "original_source": "实验/结果/cpu_baseline_daily.csv",
+      "sha256": "ce546dc6f4a49c309df5a271e57fd7865bf90b6be18679eef195e837ab7fade7",
+      "bytes": 223132
+    },
+    {
+      "path": "results/reference/expanded/cpu_baseline_summary.csv",
+      "original_source": "实验/结果/cpu_baseline_summary.csv",
+      "sha256": "d0809ab9e1a067b5385cb997ea87a431aa7c30260581dd26efab5ecfa32f5f40",
+      "bytes": 2127
+    },
+    {
+      "path": "results/reference/expanded/cpu_history_hgb_forecast.csv",
+      "original_source": "实验/结果/cpu_history_hgb_forecast.csv",
+      "sha256": "384ef0ab79d5df3b807e8a32f0171cb0f8666805fa613ca7160d07524570f7dd",
+      "bytes": 83
+    },
+    {
+      "path": "results/reference/expanded/expansion_manifest.json",
+      "original_source": "实验/结果/expansion_manifest.json",
+      "sha256": "eaff54ed1a48a3230622904c17dad20d5bc22b2984daae6dd335f2ae4f8b7529",
+      "bytes": 1941
+    },
+    {
+      "path": "results/reference/expanded/forecast_comparison.csv",
+      "original_source": "实验/结果/forecast_comparison.csv",
+      "sha256": "5a86e9ae605de0acaaf38e67beee01a3260f5bd21d6f78a36c901b617620f3d4",
+      "bytes": 656
+    },
+    {
+      "path": "results/reference/expanded/gru_manifest.json",
+      "original_source": "实验/结果/gru_manifest.json",
+      "sha256": "5910128cb03ac2796ec951e90c8143d0a3ea9f09154cf12905589fc0d5dd9962",
+      "bytes": 795
+    },
+    {
+      "path": "results/reference/expanded/gru_predictions.csv",
+      "original_source": "实验/结果/gru_predictions.csv",
+      "sha256": "461978f835c9dfce6e2a15fe640a146d95002739702c58be094d02dad4e57b0e",
+      "bytes": 2591342
+    },
+    {
+      "path": "results/reference/expanded/gru_training_history.csv",
+      "original_source": "实验/结果/gru_training_history.csv",
+      "sha256": "f6e27cb46d6cf92fca079149f49f006dc55384e0bd293105bb65805e7a1e9c63",
+      "bytes": 1648
+    },
+    {
+      "path": "results/reference/expanded/paired_test_comparison.json",
+      "original_source": "实验/结果/paired_test_comparison.json",
+      "sha256": "61723f3e3de3aa5c463e89044afc8e18ff7bce4f9593b543fb8fd4b8f842918c",
+      "bytes": 1167
+    },
+    {
+      "path": "results/reference/expanded/policy_selection.json",
+      "original_source": "实验/结果/policy_selection.json",
+      "sha256": "4544b98e0177f8e84dd93c543059bb2d5543c340e994c52efd1804a655536fb7",
+      "bytes": 792
+    },
+    {
+      "path": "results/reference/expanded/policy_test_daily.csv",
+      "original_source": "实验/结果/policy_test_daily.csv",
+      "sha256": "d550d9f35b928c7372fb0c09aeba720022c0712195cb6f004c528317d341d1d3",
+      "bytes": 88131
+    },
+    {
+      "path": "results/reference/expanded/policy_test_monthly.csv",
+      "original_source": "实验/结果/policy_test_monthly.csv",
+      "sha256": "be329bd40ff8af1b10463ced1eac89fb7d441ec3054bfc7c604fe803f5f7cdfb",
+      "bytes": 785
+    },
+    {
+      "path": "results/reference/expanded/policy_test_summary.csv",
+      "original_source": "实验/结果/policy_test_summary.csv",
+      "sha256": "55220d75919bb0145393f0c0c47120e755e042214c8b57216fdd41dcda482eaf",
+      "bytes": 897
+    },
+    {
+      "path": "results/reference/expanded/policy_validation_daily.csv",
+      "original_source": "实验/结果/policy_validation_daily.csv",
+      "sha256": "841b6afebe7ebfe1c19b335db51ef0eb37edb0cd2426b459abf3d474bd5448c9",
+      "bytes": 296571
+    },
+    {
+      "path": "results/reference/expanded/policy_validation_summary.csv",
+      "original_source": "实验/结果/policy_validation_summary.csv",
+      "sha256": "c9e9daf4bc011a2e823f0f4c83c40a1f083892f1407fd173d9c5ef7a5d0a5a8b",
+      "bytes": 2724
+    },
+    {
+      "path": "results/reference/initial/final_verdict.json",
+      "original_source": "data/COR_第四问改进实验/结果/final_verdict.json",
+      "sha256": "081d6918d2fa0c721697bb230a098bb7db12013bd9f8558068c07079b7d1d13c",
+      "bytes": 600
+    },
+    {
+      "path": "results/reference/initial/full_daily.csv",
+      "original_source": "data/COR_第四问改进实验/结果/full_daily.csv",
+      "sha256": "c566a7330ca0130e2222bf849598e9035eac56aa17caae56308c93d0dc7e267f",
+      "bytes": 167764
+    },
+    {
+      "path": "results/reference/initial/full_summary_by_split.csv",
+      "original_source": "data/COR_第四问改进实验/结果/full_summary_by_split.csv",
+      "sha256": "9cababcfeb21e6bce34626ff946888e5342c243d14f05f0b57eff43d81b9d8c6",
+      "bytes": 1050
+    },
+    {
+      "path": "results/reference/initial/independent_audit.json",
+      "original_source": "data/COR_第四问改进实验/结果/independent_audit.json",
+      "sha256": "b90ac309522ce7549971cb208672a55a5e26f9809dbf492b592d0ff4485ebef6",
+      "bytes": 4410
+    },
+    {
+      "path": "results/reference/initial/pilot_daily.csv",
+      "original_source": "data/COR_第四问改进实验/结果/pilot_daily.csv",
+      "sha256": "357fd232769a4775f3f76a95b3e4f9126424b92a36c7597621f8a8ce65c1bdd3",
+      "bytes": 37608
+    },
+    {
+      "path": "results/reference/initial/pilot_decision.json",
+      "original_source": "data/COR_第四问改进实验/结果/pilot_decision.json",
+      "sha256": "c6fec46dab33e93a484598d0b27cc0b27d7663a6db1326e102f175138ecc6a16",
+      "bytes": 182
+    },
+    {
+      "path": "results/reference/initial/pilot_price_only_decision.json",
+      "original_source": "data/COR_第四问改进实验/结果/pilot_price_only_decision.json",
+      "sha256": "3b4f3e93a388d89a7f0473da1ec274d9829f0364eec369e9ef3934c2ad22d9e7",
+      "bytes": 154
+    },
+    {
+      "path": "results/reference/initial/pilot_price_only_summary.csv",
+      "original_source": "data/COR_第四问改进实验/结果/pilot_price_only_summary.csv",
+      "sha256": "690bc81551064447ddfa29c19c74d87ad1b2c127a371d0fc6ad5562c9ef0d056",
+      "bytes": 883
+    },
+    {
+      "path": "results/reference/initial/pilot_summary.csv",
+      "original_source": "data/COR_第四问改进实验/结果/pilot_summary.csv",
+      "sha256": "59d31963e68b33e672f43ac28f4d6ab7ea883f2f2461db9c17dc7c8456823ec5",
+      "bytes": 1863
+    },
+    {
+      "path": "results/reference/initial/price_forecast_metrics.csv",
+      "original_source": "data/COR_第四问改进实验/结果/price_forecast_metrics.csv",
+      "sha256": "40eec09b55be42bce4c14c4d43923002505d8e3055ce04871068f714779ca5d7",
+      "bytes": 190
+    },
+    {
+      "path": "results/reference/initial/stress_daily.csv",
+      "original_source": "data/COR_第四问改进实验/结果/stress_daily.csv",
+      "sha256": "90ba450c505996836c97440a504685db3a6cf6de1912484e4569d589bbdfa33a",
+      "bytes": 232726
+    },
+    {
+      "path": "results/reference/initial/stress_summary.csv",
+      "original_source": "data/COR_第四问改进实验/结果/stress_summary.csv",
+      "sha256": "9ed0821f99e5defd8ddc907daf41c9e1afbb256a67335361d19aa244db3814e7",
+      "bytes": 1679
+    },
+    {
+      "path": "results/reference/initial/validation_daily.csv",
+      "original_source": "data/COR_第四问改进实验/结果/validation_daily.csv",
+      "sha256": "58b21d99c1277642628ec25570c6e00d9ac47c33c1ad109a29fd8c6ef9562b5c",
+      "bytes": 243879
+    },
+    {
+      "path": "results/reference/initial/validation_summary.csv",
+      "original_source": "data/COR_第四问改进实验/结果/validation_summary.csv",
+      "sha256": "57ef61fe48bb7d4bfb7d1e0a3cdc7501607d7805c02812c75a56cd6c8bf30598",
+      "bytes": 1807
+    },
+    {
+      "path": "results/reference/benchmark/failed_jobs.csv",
+      "original_source": "data/ML基线/全日期实验结果/failed_jobs.csv",
+      "sha256": "8922d670f3c27d8155cd1a7a46fa229e194d0f35e29d89a80e9f6ef2542f9c51",
+      "bytes": 48
+    },
+    {
+      "path": "results/reference/benchmark/forecast_daily.csv",
+      "original_source": "data/ML基线/全日期实验结果/forecast_daily.csv",
+      "sha256": "f3195951ca00ca3a29c2b5c1269cf4ba8e690d576e67d45352f7f858003b490e",
+      "bytes": 710099
+    },
+    {
+      "path": "results/reference/benchmark/forecast_selected.csv",
+      "original_source": "data/ML基线/全日期实验结果/forecast_selected.csv",
+      "sha256": "2d26c0ef9a991359bd23d3ed233c4dfefc8712907fd4572b4114c0948abd3b18",
+      "bytes": 781
+    },
+    {
+      "path": "results/reference/benchmark/forecast_summary.csv",
+      "original_source": "data/ML基线/全日期实验结果/forecast_summary.csv",
+      "sha256": "07e208cceaf912ea73a858a17af26fd1937eb80f365f2d61a159d662233ce8ca",
+      "bytes": 6005
+    },
+    {
+      "path": "results/reference/benchmark/resolution_daily.csv",
+      "original_source": "data/ML基线/全日期实验结果/resolution_daily.csv",
+      "sha256": "b1c6e6ae6995a4219424d2f966519aac205e6693d43e4d7c6aa6a0d477f6e27e",
+      "bytes": 152241
+    },
+    {
+      "path": "results/reference/benchmark/resolution_summary.csv",
+      "original_source": "data/ML基线/全日期实验结果/resolution_summary.csv",
+      "sha256": "ba0a13ceaca262ee328d8a6e78a29ccf34308813698e100fcfc1c92f7919f8a5",
+      "bytes": 1825
+    },
+    {
+      "path": "results/reference/benchmark/risk_daily.csv",
+      "original_source": "data/ML基线/全日期实验结果/risk_daily.csv",
+      "sha256": "1919d3856c20fbe0afc30f0b6daab7b2b41a9f498ba66055c4a1976062a9af22",
+      "bytes": 465540
+    },
+    {
+      "path": "results/reference/benchmark/risk_paired.csv",
+      "original_source": "data/ML基线/全日期实验结果/risk_paired.csv",
+      "sha256": "5d681defc7d824b0c29fe4e53e0e6d2274784f343c3ab59269eded00e1e2ade7",
+      "bytes": 656
+    },
+    {
+      "path": "results/reference/benchmark/risk_summary.csv",
+      "original_source": "data/ML基线/全日期实验结果/risk_summary.csv",
+      "sha256": "a38c5db942edb65a716bc68b6d681b707cc78fa3cac6c0d22fda8b84ece51940",
+      "bytes": 3185
+    },
+    {
+      "path": "results/reference/benchmark/rolling_daily.csv",
+      "original_source": "data/ML基线/全日期实验结果/rolling_daily.csv",
+      "sha256": "06cce6aaa6f4826b99d975b42df66e08359ee2f5151b1859551cbba3b3fcc9e0",
+      "bytes": 1874961
+    },
+    {
+      "path": "results/reference/benchmark/rolling_selected.csv",
+      "original_source": "data/ML基线/全日期实验结果/rolling_selected.csv",
+      "sha256": "70b8cbb8aad5c2ff6b333b2a5135ba68b10ff8214c3f7671f004768913742491",
+      "bytes": 1661
+    },
+    {
+      "path": "results/reference/benchmark/rolling_summary.csv",
+      "original_source": "data/ML基线/全日期实验结果/rolling_summary.csv",
+      "sha256": "825d52ac4197691e3a336dccef6059011e706b3e8fce08c1b44d0f084329c334",
+      "bytes": 11489
+    },
+    {
+      "path": "results/reference/benchmark/run_manifest.json",
+      "original_source": "data/ML基线/全日期实验结果/run_manifest.json",
+      "sha256": "ee7b48a36d9bab7f6607ab4f9f4ac8167c5b42864654f6185d44b11432e96ca0",
+      "bytes": 361
+    },
+    {
+      "path": "results/reference/benchmark/selected_vs_formal_daily.csv",
+      "original_source": "data/ML基线/全日期实验结果/selected_vs_formal_daily.csv",
+      "sha256": "e0b41464b3603ed17c0e1adcbeb2072a3e2d751b3156236af645a550a3a16c1b",
+      "bytes": 138513
+    },
+    {
+      "path": "results/reference/benchmark/随机规划价值边界.csv",
+      "original_source": "data/ML基线/全日期实验结果/随机规划价值边界.csv",
+      "sha256": "4ba30f41b7f5a2c96276f1f0744651db7b25c3f9b5609fcdba339db2c48a2491",
+      "bytes": 57252
+    },
+    {
+      "path": "results/reference/benchmark_statistics/statistics_manifest.json",
+      "original_source": "data/ML基线/统计检验/statistics_manifest.json",
+      "sha256": "9204eea3fa9f2d8d20d8c61aab7eb0d64aa222cbcce2143ea5cde43aebf21e87",
+      "bytes": 965
+    },
+    {
+      "path": "results/reference/benchmark_statistics/分季节_控制.csv",
+      "original_source": "data/ML基线/统计检验/分季节_控制.csv",
+      "sha256": "558ebd5932858a6dd7ea683374ef04054f73ebd0e45a5cc7df77371c44fc8ae1",
+      "bytes": 1457
+    },
+    {
+      "path": "results/reference/benchmark_statistics/分辨率_配对.csv",
+      "original_source": "data/ML基线/统计检验/分辨率_配对.csv",
+      "sha256": "95ea2cfa1f28b1264ae9bafb5d355ae2f4397434e49fc366cc96635aa3910d70",
+      "bytes": 783
+    },
+    {
+      "path": "results/reference/benchmark_statistics/年度汇总_关键策略.csv",
+      "original_source": "data/ML基线/统计检验/年度汇总_关键策略.csv",
+      "sha256": "87d4ee6d0a90afc62d371c37e1973146bc9d0605bc332a1906220bb8118697d1",
+      "bytes": 1163
+    },
+    {
+      "path": "results/reference/benchmark_statistics/控制网格_均值曲面.csv",
+      "original_source": "data/ML基线/统计检验/控制网格_均值曲面.csv",
+      "sha256": "dbbd9b75da421ecf62c6108a9e3ae76107ceb4eed8158365836a3d4060008530",
+      "bytes": 1161
+    },
+    {
+      "path": "results/reference/benchmark_statistics/控制网格_费用分解.csv",
+      "original_source": "data/ML基线/统计检验/控制网格_费用分解.csv",
+      "sha256": "8a4495c9b7216d8933cb2779a12fb3ef314c4069a664d709949ebd69a6a651b7",
+      "bytes": 2040
+    },
+    {
+      "path": "results/reference/benchmark_statistics/控制网格_配对.csv",
+      "original_source": "data/ML基线/统计检验/控制网格_配对.csv",
+      "sha256": "1b46a48cf3d1ac762de22d00a04d7bfc4062d14df1159a29591af6b94b90db06",
+      "bytes": 4816
+    },
+    {
+      "path": "results/reference/benchmark_statistics/统计检验_长表.csv",
+      "original_source": "data/ML基线/统计检验/统计检验_长表.csv",
+      "sha256": "d05bffadc0c4d733031ef16294fa540f1a0cf6d8327ac728a6ca770e98b3086a",
+      "bytes": 37672
+    },
+    {
+      "path": "results/reference/benchmark_statistics/预测_全网格.csv",
+      "original_source": "data/ML基线/统计检验/预测_全网格.csv",
+      "sha256": "f6dc92ef2c5a61cfec77923cd7a827fedc492f32827500f397684f4ec8fb55da",
+      "bytes": 4595
+    },
+    {
+      "path": "results/reference/benchmark_statistics/预测_配对.csv",
+      "original_source": "data/ML基线/统计检验/预测_配对.csv",
+      "sha256": "15189c610b2aabbb9246be4b208add2798f5a4ac7656b6a984fd90afe41bf11c",
+      "bytes": 1249
+    },
+    {
+      "path": "results/reference/benchmark_statistics/风险前沿_Pareto.csv",
+      "original_source": "data/ML基线/统计检验/风险前沿_Pareto.csv",
+      "sha256": "493cf05cc3e506768e81cb66a38f0847048eebbe260face8c53655dfd26187fa",
+      "bytes": 400
+    },
+    {
+      "path": "results/reference/benchmark_statistics/风险前沿_分月.csv",
+      "original_source": "data/ML基线/统计检验/风险前沿_分月.csv",
+      "sha256": "76d99ec763ee9b3cb480225748848ca3a59e1eb5928cb27ec988ac7a46c4a908",
+      "bytes": 5079
+    },
+    {
+      "path": "results/reference/benchmark_statistics/风险前沿_配对.csv",
+      "original_source": "data/ML基线/统计检验/风险前沿_配对.csv",
+      "sha256": "7e1bbab0664ad35fadc90946628052f910c07236330f4646583b86825aca50fe",
+      "bytes": 1344
+    },
+    {
+      "path": "results/reference/benchmark_forecasters/manifest.json",
+      "original_source": "data/ML基线/ML基线/manifest.json",
+      "sha256": "96e9524358b9fe947aed313129d546cd3ee0b5324c2ed6f1d44aa44f1f1833a5",
+      "bytes": 577
+    },
+    {
+      "path": "results/reference/benchmark_forecasters/指标_汇总.csv",
+      "original_source": "data/ML基线/ML基线/指标_汇总.csv",
+      "sha256": "01862c043778558795ad8b3c7c543d9f4c89837a21cc4cf6fcfaa08d896d4f53",
+      "bytes": 3688
+    },
+    {
+      "path": "results/reference/benchmark_forecasters/模型选择.json",
+      "original_source": "data/ML基线/ML基线/模型选择.json",
+      "sha256": "0fcf99c1f9dc8eb064aeb3d4d7ccb16be326a6f3e2d9e47d6e8a5164620f91db",
+      "bytes": 642
+    },
+    {
+      "path": "results/reference/benchmark_forecasters/逐日指标.csv",
+      "original_source": "data/ML基线/ML基线/逐日指标.csv",
+      "sha256": "e24de9041976bb36f55be001277892dace016375ab65c1a194bdf99d1d6f633e",
+      "bytes": 133981
+    },
+    {
+      "path": "visualization/code/make_paper_figures.m",
+      "original_source": "article/COR_microgrid/code/make_paper_figures.m",
+      "sha256": "096aa9a3656b281c501619cb6514a1bc46c55b6ebad0f9a681e355bf5b7764bf",
+      "bytes": 8231
+    },
+    {
+      "path": "visualization/code/revise_selected_figures.m",
+      "original_source": "article/COR_microgrid/code/revise_selected_figures.m",
+      "sha256": "cc2a37b2dc057585c5a7ec0fff7c179e3cc275e130236868c3704b738b5e6c47",
+      "bytes": 5681
+    },
+    {
+      "path": "visualization/data/expansion_manifest.json",
+      "original_source": "article/COR_microgrid/data/expansion_manifest.json",
+      "sha256": "eaff54ed1a48a3230622904c17dad20d5bc22b2984daae6dd335f2ae4f8b7529",
+      "bytes": 1941
+    },
+    {
+      "path": "visualization/data/final_verdict.json",
+      "original_source": "article/COR_microgrid/data/final_verdict.json",
+      "sha256": "081d6918d2fa0c721697bb230a098bb7db12013bd9f8558068c07079b7d1d13c",
+      "bytes": 600
+    },
+    {
+      "path": "visualization/data/forecast_comparison.csv",
+      "original_source": "article/COR_microgrid/data/forecast_comparison.csv",
+      "sha256": "5a86e9ae605de0acaaf38e67beee01a3260f5bd21d6f78a36c901b617620f3d4",
+      "bytes": 656
+    },
+    {
+      "path": "visualization/data/full_summary_by_split.csv",
+      "original_source": "article/COR_microgrid/data/full_summary_by_split.csv",
+      "sha256": "9cababcfeb21e6bce34626ff946888e5342c243d14f05f0b57eff43d81b9d8c6",
+      "bytes": 1050
+    },
+    {
+      "path": "visualization/data/gru_manifest.json",
+      "original_source": "article/COR_microgrid/data/gru_manifest.json",
+      "sha256": "5910128cb03ac2796ec951e90c8143d0a3ea9f09154cf12905589fc0d5dd9962",
+      "bytes": 795
+    },
+    {
+      "path": "visualization/data/independent_audit.json",
+      "original_source": "article/COR_microgrid/data/independent_audit.json",
+      "sha256": "b90ac309522ce7549971cb208672a55a5e26f9809dbf492b592d0ff4485ebef6",
+      "bytes": 4410
+    },
+    {
+      "path": "visualization/data/paired_daily.csv",
+      "original_source": "article/COR_microgrid/data/paired_daily.csv",
+      "sha256": "d4a97bac1b56d259491ea9966578620af91b0331826f11b28a37fc044847d4ca",
+      "bytes": 8139
+    },
+    {
+      "path": "visualization/data/paired_test_comparison.json",
+      "original_source": "article/COR_microgrid/data/paired_test_comparison.json",
+      "sha256": "61723f3e3de3aa5c463e89044afc8e18ff7bce4f9593b543fb8fd4b8f842918c",
+      "bytes": 1167
+    },
+    {
+      "path": "visualization/data/policy_selection.json",
+      "original_source": "article/COR_microgrid/data/policy_selection.json",
+      "sha256": "4544b98e0177f8e84dd93c543059bb2d5543c340e994c52efd1804a655536fb7",
+      "bytes": 792
+    },
+    {
+      "path": "visualization/data/policy_test_daily.csv",
+      "original_source": "article/COR_microgrid/data/policy_test_daily.csv",
+      "sha256": "d550d9f35b928c7372fb0c09aeba720022c0712195cb6f004c528317d341d1d3",
+      "bytes": 88131
+    },
+    {
+      "path": "visualization/data/policy_test_monthly.csv",
+      "original_source": "article/COR_microgrid/data/policy_test_monthly.csv",
+      "sha256": "be329bd40ff8af1b10463ced1eac89fb7d441ec3054bfc7c604fe803f5f7cdfb",
+      "bytes": 785
+    },
+    {
+      "path": "visualization/data/policy_test_summary.csv",
+      "original_source": "article/COR_microgrid/data/policy_test_summary.csv",
+      "sha256": "55220d75919bb0145393f0c0c47120e755e042214c8b57216fdd41dcda482eaf",
+      "bytes": 897
+    },
+    {
+      "path": "visualization/data/policy_validation_summary.csv",
+      "original_source": "article/COR_microgrid/data/policy_validation_summary.csv",
+      "sha256": "c9e9daf4bc011a2e823f0f4c83c40a1f083892f1407fd173d9c5ef7a5d0a5a8b",
+      "bytes": 2724
+    },
+    {
+      "path": "visualization/data/stress_daily.csv",
+      "original_source": "article/COR_microgrid/data/stress_daily.csv",
+      "sha256": "90ba450c505996836c97440a504685db3a6cf6de1912484e4569d589bbdfa33a",
+      "bytes": 232726
+    },
+    {
+      "path": "visualization/data/stress_summary.csv",
+      "original_source": "article/COR_microgrid/data/stress_summary.csv",
+      "sha256": "9ed0821f99e5defd8ddc907daf41c9e1afbb256a67335361d19aa244db3814e7",
+      "bytes": 1679
+    },
+    {
+      "path": "visualization/data/verified_facts.json",
+      "original_source": "article/COR_microgrid/data/verified_facts.json",
+      "sha256": "c825be72943fcf923ca1cec03179b6a64275737d36cdacbbb928fd27dd490d9f",
+      "bytes": 1337
+    },
+    {
+      "path": "visualization/figures/ablation.fig",
+      "original_source": "article/COR_microgrid/figures/ablation.fig",
+      "sha256": "8175ae88a7460efc0c34ef50f18824c22a7c01200a5a5d4650f1a59a9de467e1",
+      "bytes": 121082
+    },
+    {
+      "path": "visualization/figures/ablation.pdf",
+      "original_source": "article/COR_microgrid/figures/ablation.pdf",
+      "sha256": "0d21ecb330cb1b8aad8f7bf093965b3ae99774183f544ebd4f9571eb0c46fef9",
+      "bytes": 41930
+    },
+    {
+      "path": "visualization/figures/ablation.png",
+      "original_source": "article/COR_microgrid/figures/ablation.png",
+      "sha256": "19120c208be14d3e11cc068e58b887d5cb478bf47eebd2cf4909197dd855388c",
+      "bytes": 840377
+    },
+    {
+      "path": "visualization/figures/comparison.fig",
+      "original_source": "article/COR_microgrid/figures/comparison.fig",
+      "sha256": "d1fc972a58d5000cb005b0a02b56d9d866d6a5aced486f0efb6300ec8ac5c449",
+      "bytes": 17488
+    },
+    {
+      "path": "visualization/figures/comparison.pdf",
+      "original_source": "article/COR_microgrid/figures/comparison.pdf",
+      "sha256": "a38fee0ea83b98ff25421c4d8ac3e4adf331a4ed0fa79057729c503df8bd57fb",
+      "bytes": 16283
+    },
+    {
+      "path": "visualization/figures/comparison.png",
+      "original_source": "article/COR_microgrid/figures/comparison.png",
+      "sha256": "19d422a655a49e80b463c36a33e1ddaa52c1f117e1d765e341f8ab165c2fc6c7",
+      "bytes": 540035
+    },
+    {
+      "path": "visualization/figures/forecast_decision.fig",
+      "original_source": "article/COR_microgrid/figures/forecast_decision.fig",
+      "sha256": "5b0c2596aa3b422ba6fa75f4d11fd077e28665eba3598118ed5485c74fb11763",
+      "bytes": 18130
+    },
+    {
+      "path": "visualization/figures/forecast_decision.pdf",
+      "original_source": "article/COR_microgrid/figures/forecast_decision.pdf",
+      "sha256": "1a104147521f9ffec3b3cd592c125588daf35cdd982a9ea663a151cf0f439eba",
+      "bytes": 18780
+    },
+    {
+      "path": "visualization/figures/forecast_decision.png",
+      "original_source": "article/COR_microgrid/figures/forecast_decision.png",
+      "sha256": "b1d2a800aa87d49effe90391764ac52498853c5adcb9d07d946d7d724fa82e7c",
+      "bytes": 493518
+    },
+    {
+      "path": "visualization/figures/framework.png",
+      "original_source": "article/COR_microgrid/figures/framework.png",
+      "sha256": "f42bd67bd3ac5c17bc2b46925afc157abf8d8a454c77256336cdd431772b9fbc",
+      "bytes": 454056
+    },
+    {
+      "path": "visualization/figures/paired_effect.fig",
+      "original_source": "article/COR_microgrid/figures/paired_effect.fig",
+      "sha256": "cd0dbf5704d81c4b213efad80c742b60f36c138b80ca89946e676f8ddf56d3be",
+      "bytes": 18431
+    },
+    {
+      "path": "visualization/figures/paired_effect.pdf",
+      "original_source": "article/COR_microgrid/figures/paired_effect.pdf",
+      "sha256": "bc717e2a2b0f6a77d74249202f519624ea820e0a2caa5179590ea762ffed3960",
+      "bytes": 22533
+    },
+    {
+      "path": "visualization/figures/paired_effect.png",
+      "original_source": "article/COR_microgrid/figures/paired_effect.png",
+      "sha256": "d62b2c6d61ace574bd3edbac70c026421d2e4f304b37e235fea4d9864435f8aa",
+      "bytes": 538015
+    },
+    {
+      "path": "visualization/figures/rolling.png",
+      "original_source": "article/COR_microgrid/figures/rolling.png",
+      "sha256": "d53177327b86f4fc52f0a02a379fc49cd4fcbed89d5f6afc71025da8ba2814de",
+      "bytes": 167718
+    },
+    {
+      "path": "visualization/figures/screening.png",
+      "original_source": "article/COR_microgrid/figures/screening.png",
+      "sha256": "90928b5c53bbbe0c5c198fd1f875b42dc1f77d5c49d804648a3884bec884c605",
+      "bytes": 169511
+    },
+    {
+      "path": "visualization/figures/stress.fig",
+      "original_source": "article/COR_microgrid/figures/stress.fig",
+      "sha256": "32e1e4554ed77125a5247f888b331d86f3822ba888645067c5451b36667be122",
+      "bytes": 18016
+    },
+    {
+      "path": "visualization/figures/stress.pdf",
+      "original_source": "article/COR_microgrid/figures/stress.pdf",
+      "sha256": "80affd8056165153c54a8d19ba00cb223739042ad2e20ff218552c4eeb9b2930",
+      "bytes": 16953
+    },
+    {
+      "path": "visualization/figures/stress.png",
+      "original_source": "article/COR_microgrid/figures/stress.png",
+      "sha256": "725fdf1bae9aebb8a2ca3c229b1ce251ccd8d77adee92cfdd7a51a255481fd97",
+      "bytes": 392047
+    },
+    {
+      "path": "reports/第四问COR模型优化与实验报告.docx",
+      "original_source": "实验/第四问COR模型优化与实验报告.docx",
+      "sha256": "40503b3ae9f06205ac4eb9d661b1bf754ad95f13a8416b65134857c474f3cfe5",
+      "bytes": 676349
+    }
+  ]
+}

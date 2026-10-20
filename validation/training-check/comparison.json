@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "kind": "training",
+  "timing_fields_excluded": true,
+  "monetary_energy_tolerance": {
+    "absolute": 0.0001,
+    "relative": 1e-10
+  },
+  "checks": [
+    {
+      "file": "gru_predictions.csv",
+      "compared_periods": 26496,
+      "mean_absolute_prediction_difference": 1.297946479467023e-08,
+      "maximum_absolute_prediction_difference": 3.5762786865234375e-07,
+      "bitwise_identity_required": false
+    }
+  ]
+}

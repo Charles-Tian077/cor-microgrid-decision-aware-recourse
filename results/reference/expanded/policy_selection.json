@@ -1,0 +1,29 @@
+{
+  "selection_split": "2025-07-01 to 2025-09-30",
+  "test_split": "2025-10-01 to 2025-12-31",
+  "same_inherited_q2_initial_soc_kwh": {
+    "validation": 1200.0,
+    "test": 1200.0
+  },
+  "predeclared_validation_candidates": [
+    "no_update",
+    "half_gain",
+    "full_gain",
+    "no_reserve",
+    "hgb_alpha_0.25",
+    "hgb_alpha_0.5",
+    "hgb_alpha_1",
+    "hgb_history_alpha_0.25",
+    "hgb_history_alpha_0.5",
+    "hgb_history_alpha_1",
+    "gru_alpha_0.25",
+    "gru_alpha_0.5",
+    "gru_alpha_1"
+  ],
+  "selected_price_fusion_policies": {
+    "hgb": "full_gain",
+    "hgb_history": "full_gain",
+    "gru": "full_gain"
+  },
+  "note": "Test labels are not consulted in selection; previous study had inspected these months, so this is retrospective, not pristine external validation."
+}

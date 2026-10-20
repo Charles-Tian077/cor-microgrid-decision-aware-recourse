@@ -1,0 +1,128 @@
+{
+  "development": {
+    "days": 150,
+    "baseline_cost_yuan": 5628245.461987561,
+    "selected_cost_yuan": 5545163.604727976,
+    "saving_yuan": 83081.85725958558,
+    "saving_pct": 1.4761590947073944,
+    "baseline_emergency_kwh": 36226.94877918947,
+    "selected_emergency_kwh": 14691.761274350389,
+    "baseline_emergency_days": 64,
+    "selected_emergency_days": 53,
+    "baseline_adjustment_cost_yuan": 85690.4007571589,
+    "selected_adjustment_cost_yuan": 129996.27786145407,
+    "baseline_emergency_cost_yuan": 193745.98723730206,
+    "selected_emergency_cost_yuan": 66358.25287342134,
+    "positive_saving_days_over_1_yuan": 33,
+    "negative_saving_days_over_1_yuan": 38,
+    "median_daily_saving_yuan": -5.066674020781647e-06,
+    "final_soc_kwh_baseline": 1414.274553307809,
+    "final_soc_kwh_selected": 1414.274561615616
+  },
+  "validation": {
+    "days": 92,
+    "baseline_cost_yuan": 4215485.593934442,
+    "selected_cost_yuan": 4171291.603381683,
+    "saving_yuan": 44193.99055275857,
+    "saving_pct": 1.0483724725888808,
+    "baseline_emergency_kwh": 23075.830420438797,
+    "selected_emergency_kwh": 10741.998747137719,
+    "baseline_emergency_days": 42,
+    "selected_emergency_days": 34,
+    "baseline_adjustment_cost_yuan": 48200.67582728223,
+    "selected_adjustment_cost_yuan": 78728.94058893141,
+    "baseline_emergency_cost_yuan": 121254.39831224916,
+    "selected_emergency_cost_yuan": 46532.14299784151,
+    "positive_saving_days_over_1_yuan": 20,
+    "negative_saving_days_over_1_yuan": 25,
+    "median_daily_saving_yuan": -5.576563125941902e-06,
+    "final_soc_kwh_baseline": 1548.9352037475971,
+    "final_soc_kwh_selected": 1830.4933760137096
+  },
+  "test": {
+    "days": 92,
+    "baseline_cost_yuan": 4304804.704271838,
+    "selected_cost_yuan": 4280800.671606919,
+    "saving_yuan": 24004.032664919177,
+    "saving_pct": 0.5576102590925663,
+    "baseline_emergency_kwh": 19572.715506248547,
+    "selected_emergency_kwh": 11859.595170252956,
+    "baseline_emergency_days": 35,
+    "selected_emergency_days": 27,
+    "baseline_adjustment_cost_yuan": 31775.635833625172,
+    "selected_adjustment_cost_yuan": 54620.48687761924,
+    "baseline_emergency_cost_yuan": 114930.68497749245,
+    "selected_emergency_cost_yuan": 68081.80126857923,
+    "positive_saving_days_over_1_yuan": 23,
+    "negative_saving_days_over_1_yuan": 24,
+    "median_daily_saving_yuan": -4.572468242258765e-06,
+    "final_soc_kwh_baseline": 1200.0,
+    "final_soc_kwh_selected": 1200.0
+  },
+  "all_334": {
+    "days": 334,
+    "baseline_cost_yuan": 14148535.76019384,
+    "selected_cost_yuan": 13997255.879716575,
+    "saving_yuan": 151279.88047726452,
+    "baseline_emergency_kwh": 78875.49470587682,
+    "selected_emergency_kwh": 37293.355191741066,
+    "baseline_emergency_days": 141,
+    "selected_emergency_days": 114
+  },
+  "price_mae_test": {
+    "causal_shrinkage_r00": 0.09560398550724637,
+    "hgb_day_ahead": 0.0568915656839866
+  },
+  "stress": {
+    "joint_shock_0.5": {
+      "cost_yuan": 12833897.762369698,
+      "emergency_kwh": 995190.6264124424,
+      "days": 92
+    },
+    "joint_shock_1.0": {
+      "cost_yuan": 10723697.882020226,
+      "emergency_kwh": 613350.0080321543,
+      "days": 92
+    },
+    "load_plus_10pct_0.5": {
+      "cost_yuan": 7621021.611868526,
+      "emergency_kwh": 543643.5841420115,
+      "days": 92
+    },
+    "load_plus_10pct_1.0": {
+      "cost_yuan": 6812545.23989388,
+      "emergency_kwh": 371211.8961575555,
+      "days": 92
+    },
+    "price_plus_20pct_0.5": {
+      "cost_yuan": 5165765.645126204,
+      "emergency_kwh": 19572.715506248547,
+      "days": 92
+    },
+    "price_plus_20pct_1.0": {
+      "cost_yuan": 5136960.805928301,
+      "emergency_kwh": 11859.595170252956,
+      "days": 92
+    },
+    "pv_minus_20pct_0.5": {
+      "cost_yuan": 6490593.38098625,
+      "emergency_kwh": 310375.14124255773,
+      "days": 92
+    },
+    "pv_minus_20pct_1.0": {
+      "cost_yuan": 5656052.768297303,
+      "emergency_kwh": 137459.03837406205,
+      "days": 92
+    },
+    "unshocked_0.5": {
+      "cost_yuan": 4304804.704271838,
+      "emergency_kwh": 19572.715506248547,
+      "days": 92
+    },
+    "unshocked_1.0": {
+      "cost_yuan": 4280800.671606919,
+      "emergency_kwh": 11859.595170252956,
+      "days": 92
+    }
+  }
+}

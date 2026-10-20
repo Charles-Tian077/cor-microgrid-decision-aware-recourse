@@ -1,0 +1,37 @@
+类别,参数/项目,取值,说明
+时间协议,warmup,2025-01-01..01-31 (31天),初始化与残差历史，不参与结果比较
+时间协议,development,2025-02-01..06-30 (150天),检查代码/尺度/可行性
+时间协议,validation,2025-07-01..09-30 (92天),选择预测与控制参数
+时间协议,test,2025-10-01..12-31 (92天),冻结参数后的一次性回顾测试
+时间协议,pilot,66天（每月6个日历等距日）,预实验；全量实验用全部334天
+物理参数,soc_min_kwh,1200,储能运行下限
+物理参数,soc_max_kwh,10800,储能运行上限
+物理参数,max_power_kw,5000,单方向最大充放电功率
+物理参数,charge_efficiency,0.90,充电效率
+物理参数,discharge_efficiency,0.90,放电效率
+物理参数,initial_soc_2025-01-01,6000,题目给定初始电量
+结算规则,emergency_multiplier,5.0,紧急购电=交易电价5倍
+结算规则,upward_adjustment_multiplier,1.5,上调超计划部分1.5倍
+结算规则,downward_adjustment_penalty,0.5,下调违约部分按50%
+风险模型,cvar_alpha,0.90,CVaR置信水平
+风险模型,risk_weights,0/0.0025/0.005/0.01/0.02/0.05/0.10,风险前沿网格
+风险模型,scenario_counts,3/5/7/11,场景分辨率子集
+风险模型,quantiles,0.05/0.10/0.20/0.30/0.40/0.50/0.60/0.70/0.80/0.90/0.95,11个共尾分位场景；概率为分位中点差
+风险模型,scenario_weights,0.075/0.075/0.1/0.1/0.1/0.1/0.1/0.1/0.1/0.075/0.075,π_s=(b_s-b_{s-1})，合计1
+控制模型,rolling_adjustment_gain,0/0.25/0.5/0.75/1.0,执行增益γ
+控制模型,empirical_reserve_quantile,0/0.1/0.2/0.3/0.4,储备分位τ
+控制模型,formal_reference,"γ=0.5, τ=0.2",原稿正式参考参数
+价格预测,windows_days,14/21/35/49/60,因果历史窗口
+价格预测,decay_days,7/14/21/28,指数衰减半衰参数
+价格预测,formal_reference,"window=35, decay=14",原稿正式参考参数
+求解器,engine,scipy.optimize.linprog(method='highs'),HiGHS 稀疏LP
+求解器,time_limit_sec,45,单次LP限时
+求解器,primal_dual_tolerance,1e-7,原始/对偶可行容差
+求解器,two_stage,一级费用最优+二级吞吐量择优,消除数值退化
+实验规模,full_risk_solves,334天×7个风险权重,全量实验
+实验规模,full_control_solves,334天×5×5参数组合,全量实验
+实验规模,full_resolution_solves,334天×3/5/7/11场景,全量实验
+实验规模,forecast_grid,20组参数×334天,价格预测网格
+统计推断,bootstrap,连续日序列用7日循环移动块，4000次,保留短程自相关
+统计推断,subset_bootstrap,非连续子集用月份聚类重采样,与原预实验口径一致
+统计推断,paired_test,Wilcoxon符号秩（双侧）+Holm校正,按实验族校正

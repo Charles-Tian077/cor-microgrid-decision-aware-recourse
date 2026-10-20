@@ -1,0 +1,74 @@
+{
+  "elapsed_sec": 35.99428285192698,
+  "input_rows": {
+    "observations": 52560,
+    "q2": 48096,
+    "releases": 120240,
+    "ml": 48096
+  },
+  "forecast_metrics": [
+    {
+      "split": "test",
+      "forecaster": "causal_shrinkage",
+      "slots": 13248,
+      "mae_yuan_per_kwh": 0.09560398550724637,
+      "rmse_yuan_per_kwh": 0.12390440909632153
+    },
+    {
+      "split": "test",
+      "forecaster": "hist_gradient_boosting",
+      "slots": 13248,
+      "mae_yuan_per_kwh": 0.05689156568398667,
+      "rmse_yuan_per_kwh": 0.08016572701888643
+    },
+    {
+      "split": "test",
+      "forecaster": "hgb_same_28day_history",
+      "slots": 13248,
+      "mae_yuan_per_kwh": 0.060137658544630046,
+      "rmse_yuan_per_kwh": 0.08342194283074746
+    },
+    {
+      "split": "test",
+      "forecaster": "gru_3seed_ensemble",
+      "slots": 13248,
+      "mae_yuan_per_kwh": 0.09576402184851289,
+      "rmse_yuan_per_kwh": 0.11860041442464615
+    },
+    {
+      "split": "validation",
+      "forecaster": "causal_shrinkage",
+      "slots": 13248,
+      "mae_yuan_per_kwh": 0.09509156197161836,
+      "rmse_yuan_per_kwh": 0.12489611484046644
+    },
+    {
+      "split": "validation",
+      "forecaster": "hist_gradient_boosting",
+      "slots": 13248,
+      "mae_yuan_per_kwh": 0.06111636205013013,
+      "rmse_yuan_per_kwh": 0.09291753300266477
+    },
+    {
+      "split": "validation",
+      "forecaster": "hgb_same_28day_history",
+      "slots": 13248,
+      "mae_yuan_per_kwh": 0.060440669546030175,
+      "rmse_yuan_per_kwh": 0.09382941090532197
+    },
+    {
+      "split": "validation",
+      "forecaster": "gru_3seed_ensemble",
+      "slots": 13248,
+      "mae_yuan_per_kwh": 0.06930918428017466,
+      "rmse_yuan_per_kwh": 0.09037609431923652
+    }
+  ],
+  "selected": {
+    "hgb": "full_gain",
+    "hgb_history": "full_gain",
+    "gru": "full_gain"
+  },
+  "test_days": 92,
+  "max_test_balance_residual_kwh": 1.8189894035458565e-12
+}

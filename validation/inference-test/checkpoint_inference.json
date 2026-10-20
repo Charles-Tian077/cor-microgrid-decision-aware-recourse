@@ -1,0 +1,11 @@
+{
+  "stage": "test",
+  "periods": 13248,
+  "mae": 0.09576401114463806,
+  "rmse": 0.11860041320323944,
+  "input_sha256": {
+    "03_\u89c2\u6d4b_10min.csv.gz": "ca5660d016416b1e4dd36ca4ff67f44cd1fe872793a0a1307d8cadd537074f2b",
+    "10_ML\u8bad\u7ec3\u8868_10min.csv.gz": "e900c0b07d56fb1e07984863118f62bada4299a9397c6fab818924e37564f622"
+  },
+  "max_difference_from_same_training_run": 1.7881393432617188e-07
+}
