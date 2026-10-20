@@ -7,6 +7,8 @@ if strcmp(outputFolder,here) || startsWith(string(outputFolder),string(fullfile(
     error('Choose a generated-output directory, not the reference archive.');
 end
 if ~exist(outputFolder,'dir'), mkdir(outputFolder); end
+figureFolder=fullfile(outputFolder,'figures');
+if ~exist(figureFolder,'dir'), mkdir(figureFolder); end
 codeFolder=fullfile(outputFolder,'code');
 if ~exist(codeFolder,'dir'), mkdir(codeFolder); end
 copyfile(fullfile(here,'code','*.m'),codeFolder);

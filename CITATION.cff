@@ -13,6 +13,35 @@ authors:
     given-names: Rui
   - family-names: Du
     given-names: Xiaozhi
+  - family-names: Gong
+    given-names: Yi
+  - family-names: Geng
+    given-names: Tianhao
+  - family-names: Yin
+    given-names: Caiwei
   - family-names: Yang
     given-names: Fan
 repository-code: "https://github.com/Charles-Tian077/cor-microgrid-decision-aware-recourse"
+preferred-citation:
+  type: article
+  title: "Decision-aware receding-horizon linear programming for residential microgrids under asymmetric electricity settlement"
+  status: in-preparation
+  authors:
+    - family-names: Tian
+      given-names: Dawen
+    - family-names: Li
+      given-names: Jiayi
+    - family-names: Zhang
+      given-names: Xinghai
+    - family-names: Qian
+      given-names: Rui
+    - family-names: Du
+      given-names: Xiaozhi
+    - family-names: Gong
+      given-names: Yi
+    - family-names: Geng
+      given-names: Tianhao
+    - family-names: Yin
+      given-names: Caiwei
+    - family-names: Yang
+      given-names: Fan

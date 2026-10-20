@@ -16,6 +16,10 @@ This archive accompanies **Decision-aware receding-horizon linear programming fo
 
 > **Scope.** This is a retrospective study of one microgrid and one operating year. All decision comparisons preserve the inherited purchasing plan and use the same information clock. A prediction model is not assumed to improve dispatch merely because its MAE is lower.
 
+## Access for editorial and peer review
+
+The accompanying `COR_microgrid_reproducibility.zip` contains the complete archive and can be uploaded as reviewer-accessible supplementary material. It does not require GitHub credentials. The private repository URL identifies the archive but does not grant reviewers access; the submission must include the ZIP or explicitly granted repository access. The repository remains private before publication.
+
 ## Study workflow
 
 ```mermaid
@@ -151,7 +155,7 @@ New runs go to `runs/`, which is ignored by Git. Reference data and original sou
 
 ## Verification performed
 
-The frozen comparison, complete candidate screen, continuous replay, stress study, three-seed retraining and checkpoint inference were actually rerun before archiving. See [verification evidence](validation/summary.json) and [result mappings](docs/RESULTS.md). Control costs/energy reproduce to floating-point precision. MATLAB figure regeneration was blocked by local authorization service error 5001 before script execution; the plotting sources and original figure artifacts remain available.
+The frozen comparison, complete candidate screen, continuous replay, stress study, three-seed retraining and checkpoint inference were actually rerun before archiving. See [verification evidence](validation/summary.json) and [result mappings](docs/RESULTS.md). Control costs/energy reproduce to floating-point precision. MATLAB figure regeneration also completed: all five vector PDFs have identical page-content streams and identical 144-dpi rendered pixels to the manuscript figures; timestamps differ. The 900-dpi PNG and editable FIG outputs were generated. The output-directory portability fix is confined to the wrapper; both original plotting sources are unchanged.
 
 ## Reproducibility notes
 
@@ -165,5 +169,19 @@ The frozen comparison, complete candidate screen, continuous replay, stress stud
 
 ## Authors
 
-Dawen Tian, Jiayi Li, Xinghai Zhang, Rui Qian, Xiaozhi Du and Fan Yang.
+Dawen Tian, Jiayi Li, Xinghai Zhang, Rui Qian, Xiaozhi Du, Yi Gong, Tianhao Geng, Caiwei Yin and Fan Yang.
 The first three authors contributed equally. Correspondence: **Xiaozhi Du**, `xzdu@xjtu.edu.cn`.
+
+## Author contributions and funding
+
+- **Dawen Tian:** Methodology, Writing – original draft.
+- **Jiayi Li:** Methodology, Formal analysis.
+- **Xinghai Zhang:** Investigation.
+- **Rui Qian:** Methodology, Visualization, Writing – review & editing.
+- **Xiaozhi Du:** Supervision, Funding acquisition.
+- **Yi Gong:** Visualization.
+- **Tianhao Geng:** Visualization.
+- **Caiwei Yin:** Methodology, Formal analysis.
+- **Fan Yang:** Resources.
+
+This work was supported in part by the National Key Research and Development Program under Grant 2024YFB3311200 and by the State Grid Zhejiang Electric Power Company Technology Project under Project No. 5211XT260007. Both funding sources were obtained by Xiaozhi Du. The authors declare no competing interests.

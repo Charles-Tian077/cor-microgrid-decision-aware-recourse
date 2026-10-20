@@ -10,10 +10,74 @@
     "five stress cases",
     "three-seed GRU retraining",
     "validation and test checkpoint inference",
-    "end-to-end expanded replay using reconstructed forecasts"
+    "end-to-end expanded replay using reconstructed forecasts",
+    "MATLAB publication-figure regeneration (five vector PDFs and 900-dpi PNGs)"
   ],
   "neural_mean_absolute_prediction_difference": 1.297946479467023e-08,
   "neural_maximum_absolute_prediction_difference": 3.5762786865234375e-07,
-  "matlab_regeneration": "blocked before execution by licensing service error 5001; source and reference artifacts retained",
-  "reference_results_preserved": true
+  "matlab_regeneration": "passed; both unchanged plotting sources executed successfully; all five regenerated vector PDFs have identical page-content streams and identical 144-dpi rendered pixels to the manuscript figures; PDF timestamps differ",
+  "reference_results_preserved": true,
+  "matlab_figure_checks": [
+    {
+      "file": "ablation.pdf",
+      "regenerated_sha256": "f75d1381d51b23505264bbd4041ceafa20307a0d161e471cb28f411f84a5016c",
+      "manuscript_sha256": "0d21ecb330cb1b8aad8f7bf093965b3ae99774183f544ebd4f9571eb0c46fef9",
+      "byte_identical": false,
+      "page_content_stream_identical": true,
+      "pixel_identical_144_dpi": true,
+      "png_dimensions": [
+        5944,
+        5129
+      ]
+    },
+    {
+      "file": "comparison.pdf",
+      "regenerated_sha256": "8633d40bce55818c6f77b791ea7316852de5b1c738f03299cbe241aae0fe72ff",
+      "manuscript_sha256": "a38fee0ea83b98ff25421c4d8ac3e4adf331a4ed0fa79057729c503df8bd57fb",
+      "byte_identical": false,
+      "page_content_stream_identical": true,
+      "pixel_identical_144_dpi": true,
+      "png_dimensions": [
+        6032,
+        2362
+      ]
+    },
+    {
+      "file": "forecast_decision.pdf",
+      "regenerated_sha256": "8ed7cdea94c6c5124c7763d358a704d447fe2c09c87b8e5a9010b2fca8ad81e2",
+      "manuscript_sha256": "1a104147521f9ffec3b3cd592c125588daf35cdd982a9ea663a151cf0f439eba",
+      "byte_identical": false,
+      "page_content_stream_identical": true,
+      "pixel_identical_144_dpi": true,
+      "png_dimensions": [
+        6033,
+        2378
+      ]
+    },
+    {
+      "file": "paired_effect.pdf",
+      "regenerated_sha256": "e1ec7b4d058b600179c56170b6665f644db18f4bdb84979434f66fdfd5cc958d",
+      "manuscript_sha256": "bc717e2a2b0f6a77d74249202f519624ea820e0a2caa5179590ea762ffed3960",
+      "byte_identical": false,
+      "page_content_stream_identical": true,
+      "pixel_identical_144_dpi": true,
+      "png_dimensions": [
+        6032,
+        2443
+      ]
+    },
+    {
+      "file": "stress.pdf",
+      "regenerated_sha256": "d571af0020e51d6c0c4f06daa9693c986259a78b70d1c540f17a1f274f62c2cc",
+      "manuscript_sha256": "80affd8056165153c54a8d19ba00cb223739042ad2e20ff218552c4eeb9b2930",
+      "byte_identical": false,
+      "page_content_stream_identical": true,
+      "pixel_identical_144_dpi": true,
+      "png_dimensions": [
+        2891,
+        3719
+      ]
+    }
+  ],
+  "matlab_portability_fix": "Created the generated figures directory in the wrapper before export; original plotting sources and reference artifacts unchanged."
 }

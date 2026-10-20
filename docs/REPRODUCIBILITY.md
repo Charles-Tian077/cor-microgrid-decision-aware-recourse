@@ -54,6 +54,6 @@ The test months were inspected during earlier development, so the current protoc
 The supplied scenario-grid benchmark has a different offline execution protocol from the active current-period physical replay. Auxiliary table counts do not increase the independent number of sites, years or test dates. Stress perturbations reuse the same dates and released information rather than generating new observed data.
 
 
-## MATLAB authorization
+## MATLAB figure verification
 
-The unchanged plotting sources and their original figure artifacts are included. The package plotting wrapper writes to `runs/matlab/` and requires an active MATLAB installation/license. The current local verification attempt encountered MathWorks service error 5001 before script execution; MATLAB figure regeneration is therefore not claimed as a successful test in this package. Python numerical, training and inference checks are independent of MATLAB.
+Both unchanged MATLAB plotting sources were executed successfully through `visualization/reproduce_figures.m`. The wrapper creates its output and figure directories before export, keeping original sources and reference artifacts unchanged. All five regenerated vector PDFs have identical page-content streams and identical rendered pixels at 144 dpi to the manuscript figures; PDF timestamps differ. The 900-dpi PNGs and editable FIGs were also produced. The actual per-figure SHA-256 and PNG dimensions are recorded in `validation/summary.json`. An earlier licensing-service failure occurred before execution; it is superseded by this completed verification. An active MATLAB installation and license are needed to regenerate publication figures; Python numerical, training and inference checks do not require MATLAB.

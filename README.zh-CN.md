@@ -43,3 +43,9 @@ python run.py compare --kind replay --input runs/replay --out runs/replay-check
 - 上游数据集中还保留早期场景与离线控制实验；当前论文的主要结论来自新的按时序执行回放，二者不能混用。
 
 运行证据位于 `validation/`。具体数据来源、字段、单位、缺失值含义、算法参数、停止条件和数值容差均在 `docs/` 中说明。
+
+## 送审访问
+
+完整复现包 `COR_microgrid_reproducibility.zip` 可作为审稿人可见的补充材料提交，解压后不依赖 GitHub 账户。仓库在发表前保持私有，仅在论文中提供链接不会自动授予审稿人访问权限；投稿时应同时上传复现包或明确授权访问。
+
+作者依次为 Dawen Tian、Jiayi Li、Xinghai Zhang、Rui Qian、Xiaozhi Du、Yi Gong、Tianhao Geng、Caiwei Yin、Fan Yang。两项基金均由 Xiaozhi Du 获取，贡献声明中记为 Funding acquisition；Fan Yang 提供计算资源。
