@@ -2,7 +2,7 @@
 
 [English README](README.md) · [数据说明](docs/DATA.md) · [模型说明](docs/MODEL.md) · [完整运行协议](docs/REPRODUCIBILITY.md)
 
-本仓库整理当前COR论文使用的数据、建模求解代码、实验结果和复现入口。原始复制文件保留字节内容，并以SHA-256记录来源。所有重跑输出进入 `runs/`，不会覆盖参考结果。当前仓库私有，计划在论文发表后公开。
+本仓库整理当前COR论文使用的数据、建模求解代码、实验结果和复现入口。原始复制文件保留字节内容，并以SHA-256记录来源。所有重跑输出进入 `runs/`，不会覆盖参考结果。仓库现已公开，可用于编辑审阅与研究复现；原始来源标注及适用的数据授权条款继续保留。
 
 ## 从这里开始
 
@@ -46,6 +46,6 @@ python run.py compare --kind replay --input runs/replay --out runs/replay-check
 
 ## 送审访问
 
-完整复现包 `COR_microgrid_reproducibility.zip` 可作为审稿人可见的补充材料提交，解压后不依赖 GitHub 账户。仓库在发表前保持私有，仅在论文中提供链接不会自动授予审稿人访问权限；投稿时应同时上传复现包或明确授权访问。
+完整复现包 `COR_microgrid_reproducibility.zip` 可作为审稿人可见的补充材料提交，解压后不依赖 GitHub 账户。仓库现已公开，无需 GitHub 账户即可访问；复现压缩包可作为相同归档文件的离线补充材料。
 
 作者依次为 Dawen Tian、Jiayi Li、Xinghai Zhang、Rui Qian、Xiaozhi Du、Yi Gong、Tianhao Geng、Caiwei Yin、Fan Yang。两项基金均由 Xiaozhi Du 获取，贡献声明中记为 Funding acquisition；Fan Yang 提供计算资源。

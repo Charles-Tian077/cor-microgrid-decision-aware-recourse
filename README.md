@@ -12,13 +12,13 @@ Python 3.11 · SciPy/HiGHS · scikit-learn · PyTorch · MATLAB
 
 ---
 
-This archive accompanies **Decision-aware receding-horizon linear programming for residential microgrids under asymmetric electricity settlement**. It contains the complete supplied dataset export, unchanged computational source, saved experiments, portable execution entry points, and independent numerical checks. The repository is **private before publication**; public availability is planned upon publication, with source attribution and applicable data terms retained.
+This archive accompanies **Decision-aware receding-horizon linear programming for residential microgrids under asymmetric electricity settlement**. It contains the complete supplied dataset export, unchanged computational source, saved experiments, portable execution entry points, and independent numerical checks. The repository is **publicly accessible** for editorial review and research reproduction. Source attribution and applicable data terms are retained; see [rights and release terms](RIGHTS.md).
 
 > **Scope.** This is a retrospective study of one microgrid and one operating year. All decision comparisons preserve the inherited purchasing plan and use the same information clock. A prediction model is not assumed to improve dispatch merely because its MAE is lower.
 
 ## Access for editorial and peer review
 
-The accompanying `COR_microgrid_reproducibility.zip` contains the complete archive and can be uploaded as reviewer-accessible supplementary material. It does not require GitHub credentials. The private repository URL identifies the archive but does not grant reviewers access; the submission must include the ZIP or explicitly granted repository access. The repository remains private before publication.
+The accompanying `COR_microgrid_reproducibility.zip` contains the complete archive and can be uploaded as reviewer-accessible supplementary material. It does not require GitHub credentials. The public repository can be accessed without GitHub credentials; the ZIP provides an offline companion containing the same archived files.
 
 ## Study workflow
 
